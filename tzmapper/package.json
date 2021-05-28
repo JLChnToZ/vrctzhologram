@@ -1,0 +1,30 @@
+{
+  "name": "tzmapper",
+  "version": "0.0.0",
+  "description": "Grab Timezone Info for VRC TZ data",
+  "main": "lib/index.js",
+  "author": "Jeremy Lam \"JLChnToZ\"",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JLChnToZ/vrctzhologram.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "node ."
+  },
+  "dependencies": {
+    "@turf/turf": "^6.3.0",
+    "@types/node": "12",
+    "@types/node-fetch": "^2.5.10",
+    "@types/papaparse": "^5.2.5",
+    "jszip": "^3.6.0",
+    "node-fetch": "^2.6.1",
+    "papaparse": "^5.3.0",
+    "tslib": "^2.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
+}
