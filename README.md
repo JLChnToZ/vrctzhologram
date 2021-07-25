@@ -7,7 +7,7 @@ https://vrchat.com/home/launch?worldId=wrld_7b24185d-81e8-4d67-8859-7bcf9a45cf1a
 
 Unfortunately the clock asset in the world above are restricted by its license and cannot be included with this asset package.
 
-I may add a support link that let you to donate here in the future so please stay tuned.
+You can support this asset in Booth: https://xtl.booth.pm/items/3148154
 
 ## Getting Started
 Before you start to put this into your world, make sure you have following stuffs installed/imported to your project:
