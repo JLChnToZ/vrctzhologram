@@ -1,4 +1,4 @@
-(Time zone position data on this branch is manually adjusted to current data as of 27th July 2021, if time zones info changed, may display incorrect info. Let me know if you find your location on the sea intentionally.)
+(Time zone position data on this folk is manually adjusted to current data as of 27th July 2021, if time zones info changed, may display incorrect info. Let me know if you find your location on the sea intentionally.)
 # Timezone Sync Hologram
 ![Preview](preview.png)
 This is a gimmick asset for VRChat worlds which shows everyone's timezones, approximate location based on the timezone and their local time in the same world instance on a hologram earth, it is powered by UdonSharp. Have a remind that this asset is only tested for desktop clients, even logic that targeted to Quest clients are coded, there is no guarantee works perfectly to Quest users.
