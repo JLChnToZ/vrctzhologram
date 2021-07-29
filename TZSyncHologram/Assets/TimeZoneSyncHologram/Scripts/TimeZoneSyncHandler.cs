@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using VRC.SDKBase;
 using VRC.Udon;
 using VRC.Udon.Common;
+using VRC.Udon.Common.Interfaces;
 using UdonSharp;
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
@@ -162,6 +163,15 @@ public class TimeZoneSyncHandler : UdonSharpBehaviour {
     
     public void RetrySync() {
         RequestSerialization();
+    }
+
+    public void Resync() { // Callback for resync button: UdonBehaviour.SendCustomEvent("Resync")
+        if (startSyncOver) return;
+        startSyncOver = true;
+        if (Networking.IsOwner(gameObject))
+            DeferTransfer();
+        else
+            SendCustomNetworkEvent(NetworkEventTarget.Owner, nameof(Resync));
     }
 
     void UnpackData() {
