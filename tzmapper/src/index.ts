@@ -1,10 +1,8 @@
 import { promisify } from 'util';
 import { writeFile } from 'fs';
-import { get } from 'https';
 import { gunzip } from 'zlib';
 import JSZip from 'jszip';
-import { IncomingMessage, RequestOptions } from 'http';
-import { centroid, Feature, feature, FeatureCollection, union, Polygon, MultiPolygon } from '@turf/turf';
+import { Feature, feature, truncate, FeatureCollection, union, Polygon, MultiPolygon, pointOnFeature } from '@turf/turf';
 import { parse as parseCsv, unparse as unparseCsv } from 'papaparse';
 import fetch from 'node-fetch';
 
@@ -61,7 +59,7 @@ const result: (string | number)[][] = [];
   console.log('Finalize data');
   for (const [tz, feature] of tzFeatureSet) {
     console.log(`> ${tz}`);
-    const { geometry: { coordinates: [lon, lat] } } = centroid(feature);
+    const { geometry: { coordinates: [lon, lat] } } = truncate(pointOnFeature(feature), { precision: 5, coordinates: 2, mutate: true });
     result.push([tz, invGroupFeatures.get(tz) || tz, lon, lat]);
   }
   console.log('> Convert to CSV...');

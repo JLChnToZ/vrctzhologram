@@ -67,7 +67,7 @@ const result = [];
     console.log('Finalize data');
     for (const [tz, feature] of tzFeatureSet) {
         console.log(`> ${tz}`);
-        const { geometry: { coordinates: [lon, lat] } } = turf_1.centroid(feature);
+        const { geometry: { coordinates: [lon, lat] } } = turf_1.truncate(turf_1.pointOnFeature(feature), { precision: 5, coordinates: 2, mutate: true });
         result.push([tz, invGroupFeatures.get(tz) || tz, lon, lat]);
     }
     console.log('> Convert to CSV...');
