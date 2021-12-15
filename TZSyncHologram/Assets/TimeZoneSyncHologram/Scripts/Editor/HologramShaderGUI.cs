@@ -14,9 +14,11 @@ public class HologramShaderGUI : ShaderGUI
     // Albedo
     private MaterialProperty Albedo = null;
     private MaterialProperty AlbedoColor = null;
+    private MaterialProperty AlbedoColor2 = null;
     private MaterialProperty Brightness = null;
     private MaterialProperty Alpha = null;
     private MaterialProperty Direction = null;
+    private MaterialProperty MSDFPixelSize = null;
 
     // Rim
     private MaterialProperty RimColor = null;
@@ -54,9 +56,11 @@ public class HologramShaderGUI : ShaderGUI
     {
         Albedo = FindProperty("_MainTex", _props);
         AlbedoColor = FindProperty("_MainColor", _props);
+        AlbedoColor2 = FindProperty("_MainColor2", _props);
         Brightness = FindProperty("_Brightness", _props);
         Alpha = FindProperty("_Alpha", _props);
         Direction = FindProperty("_Direction", _props);
+        MSDFPixelSize = FindProperty("_MainTexMSDFPixelRange", _props);
 
         RimColor = FindProperty("_RimColor", _props);
         RimPower = FindProperty("_RimPower", _props);
@@ -181,11 +185,26 @@ public class HologramShaderGUI : ShaderGUI
         EditorGUI.indentLevel++;
         var ofs = EditorGUIUtility.labelWidth;
         _materialEditor.SetDefaultGUIWidths();
+        bool msdfEnable = Array.IndexOf(_material.shaderKeywords, "_MAIN_TEX_MSDF") != -1;
         EditorGUIUtility.labelWidth = 0;
-        _materialEditor.TexturePropertySingleLine(Styles.AlbedoText, Albedo, AlbedoColor);
+        if (msdfEnable)
+            _materialEditor.TexturePropertySingleLine(Styles.AlbedoText, Albedo, AlbedoColor2, AlbedoColor);
+        else
+            _materialEditor.TexturePropertySingleLine(Styles.AlbedoText, Albedo, AlbedoColor);
         EditorGUIUtility.labelWidth = ofs;
         _materialEditor.ShaderProperty(Brightness, "Brightness");
         _materialEditor.ShaderProperty(Alpha, "Alpha");
+        EditorGUI.BeginChangeCheck();
+        msdfEnable = EditorGUILayout.Toggle("As MSDF Texture", msdfEnable);
+        if (EditorGUI.EndChangeCheck())
+        {
+            if (msdfEnable)
+                _material.EnableKeyword("_MAIN_TEX_MSDF");
+            else
+                _material.DisableKeyword("_MAIN_TEX_MSDF");
+        }
+        if (msdfEnable)
+            _materialEditor.ShaderProperty(MSDFPixelSize, "Pixel Size");
         EditorGUI.indentLevel--;
     }
 

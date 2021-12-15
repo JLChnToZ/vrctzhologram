@@ -9,6 +9,8 @@
 		// Main Color
 		_MainTex ("MainTexture", 2D) = "white" {}
 		_MainColor ("MainColor", Color) = (1,1,1,1)
+		_MainColor2 ("SecondaryColor", Color) = (0,0,0,0)
+		_MainTexMSDFPixelRange("Pixel Range", Range (0.0, 10.0)) = 4.0
 		// Rim/Fresnel
 		_RimColor ("Rim Color", Color) = (1,1,1,1)
 		_RimPower ("Rim Power", Range(0.1, 10)) = 5.0
@@ -42,6 +44,7 @@
 			#pragma shader_feature _SCAN_ON
 			#pragma shader_feature _GLOW_ON
 			#pragma shader_feature _GLITCH_ON
+			#pragma shader_feature _MAIN_TEX_MSDF
 			#pragma vertex vert
 			#pragma fragment frag
 			
@@ -64,10 +67,13 @@
 			};
 
 			sampler2D _MainTex;
+			float4 _MainTex_TexelSize;
+			float _MainTexMSDFPixelRange;
 			sampler2D _FlickerTex;
 			float4 _Direction;
 			float4 _MainTex_ST;
 			float4 _MainColor;
+			float4 _MainColor2;
 			float4 _RimColor;
 			float _RimPower;
 			float _GlitchSpeed;
@@ -98,11 +104,20 @@
 
 				return o;
 			}
-
 			
 			fixed4 frag (v2f i) : SV_Target
 			{
-				fixed4 texColor = tex2D(_MainTex, i.uv);
+				float4 texColor = tex2D(_MainTex, i.uv);
+
+				// MSDF Processing
+				#ifdef _MAIN_TEX_MSDF
+					float opacity = clamp(
+						lerp(
+							0.5,
+							max(min(texColor.r, texColor.g), min(max(texColor.r, texColor.g), texColor.b)),
+							max(dot(_MainTexMSDFPixelRange / _MainTex_TexelSize.zw, 0.5 / fwidth(i.uv)), 1)
+						), 0, 1);
+				#endif
 
 				half dirVertex = (dot(i.worldVertex, normalize(float4(_Direction.xyz, 1.0))) + 1) / 2;
 
@@ -125,7 +140,11 @@
 				half rim = 1.0-saturate(dot(i.viewDir, i.worldNormal));
 				fixed4 rimColor = _RimColor * pow (rim, _RimPower);
 
-				fixed4 col = texColor * _MainColor + (glow * 0.35 * _MainColor) + rimColor;
+				#ifdef _MAIN_TEX_MSDF
+					fixed4 col = lerp(_MainColor2, _MainColor, opacity) + (glow * 0.35 * _MainColor) + rimColor;
+				#else
+					fixed4 col = texColor * _MainColor + (glow * 0.35 * _MainColor) + rimColor;
+				#endif
 				col.a = texColor.a * _Alpha * (scan + rim + glow) * flicker;
 
 				col.rgb *= _Brightness;
