@@ -3,6 +3,7 @@ using UdonSharp;
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace JLChnToZ.VRC.TimeZoneSyncHologram {
 [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
 public class TZHologramEntry : UdonSharpBehaviour {
     [SerializeField] Animator textDisplayController;
@@ -68,4 +69,5 @@ public class TZHologramEntry : UdonSharpBehaviour {
         if (textDisplayController != null)
             textDisplayController.SetBool("isActive", isActive);
     }
+}
 }

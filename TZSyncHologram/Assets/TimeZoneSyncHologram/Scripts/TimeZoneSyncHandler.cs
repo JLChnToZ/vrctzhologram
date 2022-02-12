@@ -7,6 +7,8 @@ using VRC.Udon.Common;
 using VRC.Udon.Common.Interfaces;
 using UdonSharp;
 
+
+namespace JLChnToZ.VRC.TimeZoneSyncHologram {
 [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
 public class TimeZoneSyncHandler : UdonSharpBehaviour {
     // Public properties
@@ -340,4 +342,5 @@ public class TimeZoneSyncHandler : UdonSharpBehaviour {
         } else return;
         entry.GetComponent<Text>().text = $"[{DateTime.UtcNow + networkTimeOffset:MM/dd/yyyy HH:mm:ss}] {message}";
     }
+}
 }

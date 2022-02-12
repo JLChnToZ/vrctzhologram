@@ -2,6 +2,7 @@
 using UdonSharp;
 using UnityEngine;
 
+namespace JLChnToZ.VRC.TimeZoneSyncHologram {
 [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
 public class HologramBall : UdonSharpBehaviour {
     [SerializeField] Vector3 axis = Vector3.up;
@@ -11,4 +12,5 @@ public class HologramBall : UdonSharpBehaviour {
         var timeOfDay = (DateTime.UtcNow + networkTimeOffset).TimeOfDay;
         transform.localRotation = Quaternion.AngleAxis((float)timeOfDay.TotalSeconds * 6, axis);
     }
+}
 }

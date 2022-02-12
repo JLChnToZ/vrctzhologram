@@ -4,6 +4,7 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
+namespace JLChnToZ.VRC.TimeZoneSyncHologram {
 [UdonBehaviourSyncMode(BehaviourSyncMode.NoVariableSync)]
 public class NetworkTimeSyncHandler: UdonSharpBehaviour {
     [SerializeField] GameObject[] targets;
@@ -19,4 +20,5 @@ public class NetworkTimeSyncHandler: UdonSharpBehaviour {
             .SetProgramVariable("networkTimeOffset", networkTimeOffset);
         SendCustomEventDelayedSeconds(nameof(SyncNetworkTime), timeCheckInterval);
     }
+}
 }

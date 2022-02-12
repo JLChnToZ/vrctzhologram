@@ -200,7 +200,7 @@ MonoBehaviour:
       Data: 14|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: TimeZoneSyncGroup[], Assembly-CSharp
+      Data: JLChnToZ.VRC.TimeZoneSyncHologram.TimeZoneSyncGroup[], Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 

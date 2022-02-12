@@ -3,6 +3,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+namespace HologramShader {
+
 public class HologramShaderGUI : ShaderGUI
 {
     Material _material;
@@ -378,4 +380,6 @@ public struct Foldout
             _material.SetFloat("_Fold", foldState);
         }
     }
+}
+
 }
