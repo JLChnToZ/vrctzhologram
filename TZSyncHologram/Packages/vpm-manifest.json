@@ -8,9 +8,6 @@
     },
     "com.vrchat.udonsharp": {
       "version": "1.1.6"
-    },
-    "com.llealloo.audiolink": {
-      "version": "0.3.1"
     }
   },
   "locked": {
@@ -33,10 +30,6 @@
       "dependencies": {
         "com.vrchat.worlds": "3.1.x"
       }
-    },
-    "com.llealloo.audiolink": {
-      "version": "0.3.1",
-      "dependencies": {}
     }
   }
 }
