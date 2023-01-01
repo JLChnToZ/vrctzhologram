@@ -34,6 +34,12 @@ public class TimeZoneSyncHandler : UdonSharpBehaviour {
     int playerCount;
     bool startSyncOver;
     [NonSerialized] public TimeSpan networkTimeOffset;
+    TimeZoneInfo LocalTimeZone {
+        get {
+            TimeZoneInfo.ClearCachedData();
+            return TimeZoneInfo.Local;
+        }
+    }
 
     string[] tzNames;
     string[] tzNamesAlt;
@@ -89,12 +95,12 @@ public class TimeZoneSyncHandler : UdonSharpBehaviour {
         }
         if (player.isLocal) {
         #if UNITY_ANDROID
-            var tzOffset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow);
+            var tzOffset = LocalTimeZone.GetUtcOffset(DateTime.UtcNow);
             double hourOffsets = tzOffset.TotalHours;
             tzInfos[index] = hourOffsets == 0 ? "Etc/GMT" : $"Etc/GMT{hourOffsets:+#;-#}";
             tzOffsets[index] = tzOffset;
         #else
-            tzInfos[index] = TimeZoneInfo.Local.Id;
+            tzInfos[index] = LocalTimeZone.Id;
         #endif
             RefreshClocks();
         }
@@ -140,7 +146,7 @@ public class TimeZoneSyncHandler : UdonSharpBehaviour {
             return;
         }
         Log("Sync flow triggered.");
-        var localTimeZone = TimeZoneInfo.Local;
+        var localTimeZone = LocalTimeZone;
         var offset = localTimeZone.GetUtcOffset(DateTime.UtcNow);
     #if UNITY_ANDROID
         double hourOffsets = offset.TotalHours;
@@ -333,7 +339,7 @@ public class TimeZoneSyncHandler : UdonSharpBehaviour {
         if (debugContainer == null) return;
         GameObject entry;
         if (debugContainer.childCount < maxDebugEntries && debugEntryTemplate != null) {
-            entry = VRCInstantiate(debugEntryTemplate);
+            entry = Instantiate(debugEntryTemplate);
             entry.transform.SetParent(debugContainer, false);
         } else if (debugContainer.childCount > 0) {
             var entryTransform = debugContainer.GetChild(0);
