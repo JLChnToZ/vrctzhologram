@@ -1,0 +1,20 @@
+{
+  "name": "idv.jlchntoz.vrctzhologram",
+  "displayName": "Time Zone Sync Hologram",
+  "version": "1.3.1",
+  "unity": "2019.4",
+  "description": "A hologram earth gimmick asset for VRChat SDK3 worlds which shows everyone's timezone, approximate location and their local time.",
+  "license": "MIT",
+  "vrchatVersion": "2022.1.1",
+  "vpmDependencies": {
+    "com.vrchat.worlds": "3.x.x"
+  },
+  "legacyFolders" : {
+    "Assets/TimeZoneSyncHologram" : "fa4ad15176258b84e81d7d4154e8f6ba"
+  },
+  "author": {
+    "name": "Jeremy Lam aka. Vistanz",
+    "email": "me@moka-rin.moe",
+    "url": "https://xtl.booth.pm"
+  }
+}
