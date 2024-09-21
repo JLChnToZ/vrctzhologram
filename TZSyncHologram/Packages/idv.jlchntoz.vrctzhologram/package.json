@@ -7,7 +7,8 @@
   "license": "MIT",
   "vrchatVersion": "2022.1.1",
   "vpmDependencies": {
-    "com.vrchat.worlds": "3.x.x"
+    "com.vrchat.worlds": "3.x.x",
+    "idv.jlchntoz.vrcw-foundation": "0.x.x"
   },
   "legacyFolders" : {
     "Assets/TimeZoneSyncHologram" : "fa4ad15176258b84e81d7d4154e8f6ba"

@@ -1,0 +1,2483 @@
+{
+  "data": {
+    "Africa/Abidjan": {
+      "name": "Greenwich Mean Time",
+      "latitude": 5.2916666666728105,
+      "longitude": -3.9666666666548167
+    },
+    "Africa/Accra": {
+      "name": "Greenwich Mean Time",
+      "latitude": 5.650000000006173,
+      "longitude": -0.1999999999878952
+    },
+    "Africa/Addis_Ababa": {
+      "name": "East Africa Time",
+      "latitude": 9.041666666673066,
+      "longitude": 38.725000000014205
+    },
+    "Africa/Algiers": {
+      "name": "Central European Time",
+      "latitude": 36.750000000008285,
+      "longitude": 3.0500000000117753
+    },
+    "Africa/Asmara": {
+      "name": "East Africa Time",
+      "latitude": 14.300000000006762,
+      "longitude": 36.61666666668073
+    },
+    "Africa/Bamako": {
+      "name": "Greenwich Mean Time",
+      "latitude": 12.625000000006636,
+      "longitude": -7.966666666655087
+    },
+    "Africa/Bangui": {
+      "name": "West Africa Time",
+      "latitude": 4.408333333339414,
+      "longitude": 18.533333333346164
+    },
+    "Africa/Banjul": {
+      "name": "Greenwich Mean Time",
+      "latitude": 13.458333333340036,
+      "longitude": -16.583333333322344
+    },
+    "Africa/Bissau": {
+      "name": "Greenwich Mean Time",
+      "latitude": 11.88333333333992,
+      "longitude": -15.591666666655613
+    },
+    "Africa/Blantyre": {
+      "name": "Central Africa Time",
+      "latitude": -13.958333333328158,
+      "longitude": 33.791666666680534
+    },
+    "Africa/Brazzaville": {
+      "name": "West Africa Time",
+      "latitude": -4.183333333327493,
+      "longitude": 15.308333333345942
+    },
+    "Africa/Bujumbura": {
+      "name": "Central Africa Time",
+      "latitude": -3.366666666660771,
+      "longitude": 29.3583333333469
+    },
+    "Africa/Cairo": {
+      "name": "Eastern European Time",
+      "latitude": 30.083333333341166,
+      "longitude": 31.20000000001369
+    },
+    "Africa/Casablanca": {
+      "name": "Western European Time",
+      "latitude": 31.63333333334127,
+      "longitude": -7.983333333321752
+    },
+    "Africa/Ceuta": {
+      "name": "Ceuta, Africa",
+      "latitude": 35.30000000000818,
+      "longitude": -2.9583333333214057
+    },
+    "Africa/Conakry": {
+      "name": "Greenwich Mean Time",
+      "latitude": 9.57500000000644,
+      "longitude": -13.641666666655468
+    },
+    "Africa/Dakar": {
+      "name": "Greenwich Mean Time",
+      "latitude": 14.733333333340113,
+      "longitude": -17.32499999998906
+    },
+    "Africa/Dar_es_Salaam": {
+      "name": "East Africa Time",
+      "latitude": -6.791666666661004,
+      "longitude": 39.241666666680906
+    },
+    "Africa/Djibouti": {
+      "name": "East Africa Time",
+      "latitude": 11.566666666673243,
+      "longitude": 42.933333333347825
+    },
+    "Africa/Douala": {
+      "name": "West Africa Time",
+      "latitude": 3.8833333333393796,
+      "longitude": 11.54166666667902
+    },
+    "Africa/El_Aaiun": {
+      "name": "Western European Time",
+      "latitude": 23.825000000007407,
+      "longitude": -15.891666666655624
+    },
+    "Africa/Freetown": {
+      "name": "Greenwich Mean Time",
+      "latitude": 8.500000000006366,
+      "longitude": -13.208333333322116
+    },
+    "Africa/Gaborone": {
+      "name": "Central Africa Time",
+      "latitude": -21.191666666661984,
+      "longitude": 27.466666666680105
+    },
+    "Africa/Harare": {
+      "name": "Central Africa Time",
+      "latitude": -18.033333333328436,
+      "longitude": 31.050000000013682
+    },
+    "Africa/Johannesburg": {
+      "name": "South Africa Time",
+      "latitude": -26.183333333328992,
+      "longitude": 28.041666666680143
+    },
+    "Africa/Juba": {
+      "name": "Central Africa Time",
+      "latitude": 4.800000000006108,
+      "longitude": 33.491666666680516
+    },
+    "Africa/Kampala": {
+      "name": "East Africa Time",
+      "latitude": 0.3666666666724723,
+      "longitude": 32.52500000001378
+    },
+    "Africa/Khartoum": {
+      "name": "Central Africa Time",
+      "latitude": 15.533333333340181,
+      "longitude": 32.48333333334711
+    },
+    "Africa/Kigali": {
+      "name": "Central Africa Time",
+      "latitude": -1.9499999999940079,
+      "longitude": 30.05000000001361
+    },
+    "Africa/Kinshasa": {
+      "name": "West Africa Time",
+      "latitude": -4.366666666660839,
+      "longitude": 15.291666666679275
+    },
+    "Africa/Lagos": {
+      "name": "West Africa Time",
+      "latitude": 6.466666666672893,
+      "longitude": 3.31666666667846
+    },
+    "Africa/Libreville": {
+      "name": "West Africa Time",
+      "latitude": 0.39166666667247796,
+      "longitude": 9.516666666678882
+    },
+    "Africa/Lome": {
+      "name": "Greenwich Mean Time",
+      "latitude": 6.11666666667287,
+      "longitude": 1.2000000000116493
+    },
+    "Africa/Luanda": {
+      "name": "West Africa Time",
+      "latitude": -8.849999999994477,
+      "longitude": 13.308333333345807
+    },
+    "Africa/Lubumbashi": {
+      "name": "Central Africa Time",
+      "latitude": -6.09999999999429,
+      "longitude": 23.658333333346512
+    },
+    "Africa/Lusaka": {
+      "name": "Central Africa Time",
+      "latitude": -15.324999999994919,
+      "longitude": 28.283333333346825
+    },
+    "Africa/Malabo": {
+      "name": "West Africa Time",
+      "latitude": 3.6083333333393597,
+      "longitude": 8.883333333345506
+    },
+    "Africa/Maputo": {
+      "name": "Central Africa Time",
+      "latitude": -25.933333333328974,
+      "longitude": 32.558333333347115
+    },
+    "Africa/Maseru": {
+      "name": "South Africa Time",
+      "latitude": -29.36666666666254,
+      "longitude": 27.516666666680106
+    },
+    "Africa/Mbabane": {
+      "name": "South Africa Time",
+      "latitude": -26.533333333329015,
+      "longitude": 31.375000000013703
+    },
+    "Africa/Mogadishu": {
+      "name": "East Africa Time",
+      "latitude": 2.1666666666725973,
+      "longitude": 45.47500000001466
+    },
+    "Africa/Monrovia": {
+      "name": "Greenwich Mean Time",
+      "latitude": 6.24166666667287,
+      "longitude": -10.658333333321934
+    },
+    "Africa/Nairobi": {
+      "name": "East Africa Time",
+      "latitude": -1.2499999999939602,
+      "longitude": 36.86666666668074
+    },
+    "Africa/Ndjamena": {
+      "name": "West Africa Time",
+      "latitude": 12.216666666673277,
+      "longitude": 15.033333333345924
+    },
+    "Africa/Niamey": {
+      "name": "West Africa Time",
+      "latitude": 13.541666666673379,
+      "longitude": 7.14166666667872
+    },
+    "Africa/Nouakchott": {
+      "name": "Greenwich Mean Time",
+      "latitude": 18.133333333340346,
+      "longitude": -15.941666666655635
+    },
+    "Africa/Ouagadougou": {
+      "name": "Greenwich Mean Time",
+      "latitude": 12.291666666673294,
+      "longitude": -1.5249999999879833
+    },
+    "Africa/Porto-Novo": {
+      "name": "West Africa Time",
+      "latitude": 6.38333333333955,
+      "longitude": 2.3750000000117293
+    },
+    "Africa/Sao_Tome": {
+      "name": "Greenwich Mean Time",
+      "latitude": 0.4083333333391437,
+      "longitude": 6.716666666678692
+    },
+    "Africa/Tripoli": {
+      "name": "Eastern European Time",
+      "latitude": 32.68333333334134,
+      "longitude": 13.483333333345819
+    },
+    "Africa/Tunis": {
+      "name": "Central European Time",
+      "latitude": 36.85000000000829,
+      "longitude": 10.091666666678922
+    },
+    "Africa/Windhoek": {
+      "name": "Central Africa Time",
+      "latitude": -22.499999999995406,
+      "longitude": 17.03333333334606
+    },
+    "America/Adak": {
+      "name": "Hawaii-Aleutian Time",
+      "latitude": 51.88333333334265,
+      "longitude": -176.6333333333331
+    },
+    "America/Anchorage": {
+      "name": "Alaska Time",
+      "latitude": 61.23333333334328,
+      "longitude": -149.8083333333313
+    },
+    "America/Anguilla": {
+      "name": "Atlantic Time",
+      "latitude": 18.29166666667369,
+      "longitude": -63.25833333332552
+    },
+    "America/Antigua": {
+      "name": "Atlantic Time",
+      "latitude": 17.13333333334029,
+      "longitude": -61.86666666665876
+    },
+    "America/Aruba": {
+      "name": "Atlantic Time",
+      "latitude": 12.533333333339968,
+      "longitude": -70.04166666665931
+    },
+    "America/Araguaina": {
+      "name": "Araguaina, America",
+      "latitude": -10.1583333333279,
+      "longitude": -48.34999999999117
+    },
+    "America/Argentina/Buenos_Aires": {
+      "name": "Argentina Time",
+      "latitude": -34.59999999999623,
+      "longitude": -58.40833333332519
+    },
+    "America/Argentina/Catamarca": {
+      "name": "Catamarca, Argentina, America",
+      "latitude": -28.541666666662483,
+      "longitude": -65.80833333332569
+    },
+    "America/Argentina/Cordoba": {
+      "name": "Cordoba, Argentina, America",
+      "latitude": -31.39166666666268,
+      "longitude": -57.983333333325156
+    },
+    "America/Argentina/Jujuy": {
+      "name": "Jujuy, Argentina, America",
+      "latitude": -23.8999999999955,
+      "longitude": -65.641666666659
+    },
+    "America/Argentina/La_Rioja": {
+      "name": "La Rioja, Argentina, America",
+      "latitude": -29.64166666666256,
+      "longitude": -67.0666666666591
+    },
+    "America/Argentina/Mendoza": {
+      "name": "Mendoza, Argentina, America",
+      "latitude": -32.87499999999611,
+      "longitude": -68.8583333333259
+    },
+    "America/Argentina/Rio_Gallegos": {
+      "name": "Rio Gallegos, Argentina, America",
+      "latitude": -46.124999999997016,
+      "longitude": -71.8583333333261
+    },
+    "America/Argentina/Salta": {
+      "name": "Salta, Argentina, America",
+      "latitude": -25.033333333328912,
+      "longitude": -65.20833333332564
+    },
+    "America/Argentina/San_Juan": {
+      "name": "San Juan, Argentina, America",
+      "latitude": -31.52499999999602,
+      "longitude": -68.56666666665922
+    },
+    "America/Argentina/San_Luis": {
+      "name": "San Luis, Argentina, America",
+      "latitude": -32.27499999999607,
+      "longitude": -65.21666666665898
+    },
+    "America/Argentina/Tucuman": {
+      "name": "Tucuman, Argentina, America",
+      "latitude": -26.866666666662372,
+      "longitude": -65.21666666665898
+    },
+    "America/Argentina/Ushuaia": {
+      "name": "Ushuaia, Argentina, America",
+      "latitude": -54.82499999999761,
+      "longitude": -64.5583333333256
+    },
+    "America/Asuncion": {
+      "name": "Paraguay Time",
+      "latitude": -25.316666666662265,
+      "longitude": -57.5499999999918
+    },
+    "America/Atikokan": {
+      "name": "Eastern Time",
+      "latitude": 64.14166666667681,
+      "longitude": -83.1666666666602
+    },
+    "America/Bahia": {
+      "name": "Bahia, America",
+      "latitude": -12.924999999994755,
+      "longitude": -38.4999999999905
+    },
+    "America/Bahia_Banderas": {
+      "name": "Bahia Banderas, America",
+      "latitude": 20.775000000007196,
+      "longitude": -105.21666666666158
+    },
+    "America/Barbados": {
+      "name": "Atlantic Time",
+      "latitude": 13.150000000006685,
+      "longitude": -59.5916666666586
+    },
+    "America/Belem": {
+      "name": "Belem, America",
+      "latitude": -1.4583333333273076,
+      "longitude": -48.45833333332451
+    },
+    "America/Belize": {
+      "name": "Central Time",
+      "latitude": 17.183333333340286,
+      "longitude": -88.35833333332722
+    },
+    "America/Blanc-Sablon": {
+      "name": "Atlantic Time",
+      "latitude": 50.21666666667587,
+      "longitude": -60.65833333332534
+    },
+    "America/Boa_Vista": {
+      "name": "Boa Vista, America",
+      "latitude": 2.8333333333393114,
+      "longitude": -60.74166666665867
+    },
+    "America/Bogota": {
+      "name": "Colombia Time",
+      "latitude": 10.883333333339863,
+      "longitude": -74.7333333333263
+    },
+    "America/Boise": {
+      "name": "Boise, America",
+      "latitude": 43.825000000008764,
+      "longitude": -111.79166666666202
+    },
+    "America/Cambridge_Bay": {
+      "name": "Cambridge Bay, America",
+      "latitude": 69.11666666667716,
+      "longitude": -105.0749999999949
+    },
+    "America/Campo_Grande": {
+      "name": "Campo Grande, America",
+      "latitude": -20.516666666661937,
+      "longitude": -54.6499999999916
+    },
+    "America/Cancun": {
+      "name": "Eastern Time",
+      "latitude": 20.650000000007182,
+      "longitude": -87.06666666666047
+    },
+    "America/Caracas": {
+      "name": "Venezuela Time",
+      "latitude": 10.208333333339809,
+      "longitude": -64.71666666665895
+    },
+    "America/Cayenne": {
+      "name": "French Guiana Time",
+      "latitude": 3.850000000006048,
+      "longitude": -51.84166666665807
+    },
+    "America/Cayman": {
+      "name": "Eastern Time",
+      "latitude": 19.275000000007097,
+      "longitude": -81.25833333332675
+    },
+    "America/Chicago": {
+      "name": "Central Time",
+      "latitude": 42.00000000000864,
+      "longitude": -87.65833333332718
+    },
+    "America/Chihuahua": {
+      "name": "Chihuahua, America",
+      "latitude": 28.675000000007735,
+      "longitude": -106.12499999999497
+    },
+    "America/Ciudad_Juarez": {
+      "name": "Mountain Time",
+      "latitude": 31.650000000007935,
+      "longitude": -106.39999999999499
+    },
+    "America/Costa_Rica": {
+      "name": "Central Time",
+      "latitude": 9.900000000006457,
+      "longitude": -84.08333333332693
+    },
+    "America/Creston": {
+      "name": "Creston, America",
+      "latitude": 49.100000000009125,
+      "longitude": -116.51666666666235
+    },
+    "America/Cuiaba": {
+      "name": "Cuiaba, America",
+      "latitude": -13.074999999994764,
+      "longitude": -55.90833333332502
+    },
+    "America/Curacao": {
+      "name": "Atlantic Time",
+      "latitude": 12.100000000006602,
+      "longitude": -68.91666666665924
+    },
+    "America/Danmarkshavn": {
+      "name": "Greenwich Mean Time",
+      "latitude": 77.78691134219729,
+      "longitude": -19.79281241238983
+    },
+    "America/Dawson": {
+      "name": "Dawson, America",
+      "latitude": 64.06666666667681,
+      "longitude": -139.43333333333058
+    },
+    "America/Dawson_Creek": {
+      "name": "Dawson Creek, America",
+      "latitude": 56.24166666667628,
+      "longitude": -120.82499999999598
+    },
+    "America/Denver": {
+      "name": "Mountain Time",
+      "latitude": 40.24166666667519,
+      "longitude": -111.65833333332868
+    },
+    "America/Detroit": {
+      "name": "Detroit, America",
+      "latitude": 42.27500000000866,
+      "longitude": -83.74166666666025
+    },
+    "America/Dominica": {
+      "name": "Atlantic Time",
+      "latitude": 15.34166666667349,
+      "longitude": -61.333333333325385
+    },
+    "America/Edmonton": {
+      "name": "Mountain Time",
+      "latitude": 51.04166666667592,
+      "longitude": -114.09166666666218
+    },
+    "America/Eirunepe": {
+      "name": "Eirunepe, America",
+      "latitude": -6.666666666660996,
+      "longitude": -69.8666666666593
+    },
+    "America/El_Salvador": {
+      "name": "Central Time",
+      "latitude": 13.725000000006716,
+      "longitude": -89.14166666666061
+    },
+    "America/Fort_Nelson": {
+      "name": "Fort Nelson, America",
+      "latitude": 58.816666666676454,
+      "longitude": -122.69166666666277
+    },
+    "America/Fortaleza": {
+      "name": "Fortaleza, America",
+      "latitude": -3.699999999994127,
+      "longitude": -38.55833333332384
+    },
+    "America/Glace_Bay": {
+      "name": "Glace Bay, America",
+      "latitude": 46.14166666667559,
+      "longitude": -60.17499999999197
+    },
+    "America/Goose_Bay": {
+      "name": "Goose Bay, America",
+      "latitude": 52.941666666676056,
+      "longitude": -66.92499999999244
+    },
+    "America/Grand_Turk": {
+      "name": "Eastern Time",
+      "latitude": 21.483333333340582,
+      "longitude": -71.15833333332606
+    },
+    "America/Grenada": {
+      "name": "Atlantic Time",
+      "latitude": 12.016666666673274,
+      "longitude": -61.749999999992085
+    },
+    "America/Guadeloupe": {
+      "name": "Atlantic Time",
+      "latitude": 16.233333333340227,
+      "longitude": -61.541666666658735
+    },
+    "America/Guatemala": {
+      "name": "Central Time",
+      "latitude": 14.550000000006776,
+      "longitude": -90.54999999999391
+    },
+    "America/Guayaquil": {
+      "name": "Ecuador Time",
+      "latitude": -0.3166666666605633,
+      "longitude": -78.59999999999323
+    },
+    "America/Guyana": {
+      "name": "Guyana Time",
+      "latitude": 6.4166666666728815,
+      "longitude": -58.62499999999187
+    },
+    "America/Halifax": {
+      "name": "Atlantic Time",
+      "latitude": 44.64166666667549,
+      "longitude": -63.5749999999922
+    },
+    "America/Havana": {
+      "name": "Cuba Time",
+      "latitude": 23.133333333340687,
+      "longitude": -82.35833333332681
+    },
+    "America/Hermosillo": {
+      "name": "Mexican Pacific Time",
+      "latitude": 31.283333333341247,
+      "longitude": -110.9249999999953
+    },
+    "America/Indiana/Indianapolis": {
+      "name": "Indianapolis, Indiana, America",
+      "latitude": 40.43333333334187,
+      "longitude": -86.92499999999379
+    },
+    "America/Indiana/Knox": {
+      "name": "Knox, Indiana, America",
+      "latitude": 41.300000000008595,
+      "longitude": -86.62499999999378
+    },
+    "America/Indiana/Marengo": {
+      "name": "Marengo, Indiana, America",
+      "latitude": 38.3750000000084,
+      "longitude": -86.34999999999376
+    },
+    "America/Indiana/Petersburg": {
+      "name": "Petersburg, Indiana, America",
+      "latitude": 38.500000000008406,
+      "longitude": -87.28333333332715
+    },
+    "America/Indiana/Tell_City": {
+      "name": "Tell City, Indiana, America",
+      "latitude": 37.9583333333417,
+      "longitude": -86.76666666666046
+    },
+    "America/Indiana/Vevay": {
+      "name": "Vevay, Indiana, America",
+      "latitude": 38.79166666667509,
+      "longitude": -84.89999999999365
+    },
+    "America/Indiana/Vincennes": {
+      "name": "Vincennes, Indiana, America",
+      "latitude": 38.68333333334175,
+      "longitude": -87.52499999999384
+    },
+    "America/Indiana/Winamac": {
+      "name": "Winamac, Indiana, America",
+      "latitude": 41.05833333334191,
+      "longitude": -86.60833333332711
+    },
+    "America/Inuvik": {
+      "name": "Inuvik, America",
+      "latitude": 68.3666666666771,
+      "longitude": -133.7333333333302
+    },
+    "America/Iqaluit": {
+      "name": "Iqaluit, America",
+      "latitude": 72.70000000001073,
+      "longitude": -77.94999999999318
+    },
+    "America/Jamaica": {
+      "name": "Eastern Time",
+      "latitude": 17.966666666673675,
+      "longitude": -76.79166666665976
+    },
+    "America/Juneau": {
+      "name": "Juneau, America",
+      "latitude": 58.400000000009754,
+      "longitude": -134.58333333333024
+    },
+    "America/Kentucky/Louisville": {
+      "name": "Louisville, Kentucky, America",
+      "latitude": 38.25833333334172,
+      "longitude": -85.76666666666038
+    },
+    "America/Kentucky/Monticello": {
+      "name": "Monticello, Kentucky, America",
+      "latitude": 36.84166666667496,
+      "longitude": -84.85833333332698
+    },
+    "America/Kralendijk": {
+      "name": "Atlantic Time",
+      "latitude": 17.491666666673638,
+      "longitude": -62.99166666665883
+    },
+    "America/La_Paz": {
+      "name": "Bolivia Time",
+      "latitude": -10.999999999994623,
+      "longitude": -68.7583333333259
+    },
+    "America/Lima": {
+      "name": "Peru Time",
+      "latitude": -12.074999999994697,
+      "longitude": -77.12499999999312
+    },
+    "America/Los_Angeles": {
+      "name": "Pacific Time",
+      "latitude": 37.79166666667502,
+      "longitude": -122.41666666666275
+    },
+    "America/Lower_Princes": {
+      "name": "Atlantic Time",
+      "latitude": 18.050000000007017,
+      "longitude": -63.04999999999217
+    },
+    "America/Maceio": {
+      "name": "Maceio, America",
+      "latitude": -9.633333333327863,
+      "longitude": -35.71666666665698
+    },
+    "America/Managua": {
+      "name": "Central Time",
+      "latitude": 12.133333333339948,
+      "longitude": -86.15833333332708
+    },
+    "America/Manaus": {
+      "name": "Amazon Time",
+      "latitude": -3.099999999994086,
+      "longitude": -60.066666666658634
+    },
+    "America/Marigot": {
+      "name": "Atlantic Time",
+      "latitude": 18.058333333340343,
+      "longitude": -63.041666666658834
+    },
+    "America/Martinique": {
+      "name": "Atlantic Time",
+      "latitude": 14.641666666673444,
+      "longitude": -61.04999999999203
+    },
+    "America/Matamoros": {
+      "name": "Central Time",
+      "latitude": 26.008333333340886,
+      "longitude": -98.24999999999443
+    },
+    "America/Mazatlan": {
+      "name": "Mazatlan, America",
+      "latitude": 22.90000000000734,
+      "longitude": -109.9416666666619
+    },
+    "America/Miquelon": {
+      "name": "St. Pierre & Miquelon Time",
+      "latitude": 46.79166666667563,
+      "longitude": -56.2249999999917
+    },
+    "America/Menominee": {
+      "name": "Menominee, America",
+      "latitude": 45.11666666667552,
+      "longitude": -87.6166666666605
+    },
+    "America/Merida": {
+      "name": "Merida, America",
+      "latitude": 20.933333333340542,
+      "longitude": -89.56666666666064
+    },
+    "America/Metlakatla": {
+      "name": "Metlakatla, America",
+      "latitude": 55.13333333334287,
+      "longitude": -131.58333333333005
+    },
+    "America/Mexico_City": {
+      "name": "Central Time",
+      "latitude": 19.600000000007114,
+      "longitude": -98.98333333332782
+    },
+    "America/Moncton": {
+      "name": "Moncton, America",
+      "latitude": 45.275000000008866,
+      "longitude": -66.0583333333257
+    },
+    "America/Monterrey": {
+      "name": "Monterrey, America",
+      "latitude": 25.90000000000755,
+      "longitude": -100.17499999999457
+    },
+    "America/Montevideo": {
+      "name": "Uruguay Time",
+      "latitude": -34.90833333332959,
+      "longitude": -56.1499999999917
+    },
+    "America/Montserrat": {
+      "name": "Atlantic Time",
+      "latitude": 16.800000000006932,
+      "longitude": -62.18333333332544
+    },
+    "America/Nassau": {
+      "name": "Eastern Time",
+      "latitude": 25.00000000000749,
+      "longitude": -76.99999999999312
+    },
+    "America/New_York": {
+      "name": "Eastern Time",
+      "latitude": 40.77500000000856,
+      "longitude": -73.95833333332624
+    },
+    "America/Nome": {
+      "name": "Nome, America",
+      "latitude": 67.73333333334372,
+      "longitude": -164.53333333333228
+    },
+    "America/Noronha": {
+      "name": "Fernando de Noronha Time",
+      "latitude": -3.8499999999941372,
+      "longitude": -32.43333333332342
+    },
+    "America/North_Dakota/Beulah": {
+      "name": "Beulah, North Dakota, America",
+      "latitude": 47.275000000009,
+      "longitude": -101.78333333332802
+    },
+    "America/North_Dakota/Center": {
+      "name": "Center, North Dakota, America",
+      "latitude": 47.116666666675656,
+      "longitude": -101.29999999999464
+    },
+    "America/North_Dakota/New_Salem": {
+      "name": "New Salem, North Dakota, America",
+      "latitude": 46.841666666675636,
+      "longitude": -100.89999999999462
+    },
+    "America/Nuuk": {
+      "name": "West Greenland Time",
+      "latitude": 60.15000000000988,
+      "longitude": -45.224999999990956
+    },
+    "America/Ojinaga": {
+      "name": "Ojinaga, America",
+      "latitude": 29.54166666667446,
+      "longitude": -104.41666666666153
+    },
+    "America/Panama": {
+      "name": "Eastern Time",
+      "latitude": 8.966666666673063,
+      "longitude": -79.54166666665996
+    },
+    "America/Paramaribo": {
+      "name": "Suriname Time",
+      "latitude": 5.816666666672845,
+      "longitude": -55.216666666658305
+    },
+    "America/Phoenix": {
+      "name": "Mountain Time",
+      "latitude": 33.0416666666747,
+      "longitude": -111.33333333332865
+    },
+    "America/Port-au-Prince": {
+      "name": "Eastern Time",
+      "latitude": 18.516666666673714,
+      "longitude": -72.36666666665947
+    },
+    "America/Port_of_Spain": {
+      "name": "Atlantic Time",
+      "latitude": 10.650000000006514,
+      "longitude": -61.28333333332538
+    },
+    "America/Porto_Velho": {
+      "name": "Porto Velho, America",
+      "latitude": -8.79166666666114,
+      "longitude": -63.89166666665889
+    },
+    "America/Puerto_Rico": {
+      "name": "Atlantic Time",
+      "latitude": 18.450000000007037,
+      "longitude": -66.04999999999237
+    },
+    "America/Punta_Arenas": {
+      "name": "Chile Time",
+      "latitude": -54.79166666666427,
+      "longitude": -68.60833333332587
+    },
+    "America/Rankin_Inlet": {
+      "name": "Rankin Inlet, America",
+      "latitude": 61.11666666667661,
+      "longitude": -94.07499999999415
+    },
+    "America/Recife": {
+      "name": "Recife, America",
+      "latitude": -8.016666666661088,
+      "longitude": -34.90833333332359
+    },
+    "America/Regina": {
+      "name": "Central Time",
+      "latitude": 52.13333333334266,
+      "longitude": -106.65833333332834
+    },
+    "America/Resolute": {
+      "name": "Resolute, America",
+      "latitude": 74.70000000001087,
+      "longitude": -94.83333333332753
+    },
+    "America/Rio_Branco": {
+      "name": "Acre Time",
+      "latitude": -9.983333333327888,
+      "longitude": -67.83333333332583
+    },
+    "America/Santarem": {
+      "name": "Santarem, America",
+      "latitude": -3.191666666660759,
+      "longitude": -52.2166666666581
+    },
+    "America/Santiago": {
+      "name": "Chile Time",
+      "latitude": -33.633333333329496,
+      "longitude": -70.62499999999268
+    },
+    "America/Santo_Domingo": {
+      "name": "Atlantic Time",
+      "latitude": 18.416666666673706,
+      "longitude": -70.04166666665931
+    },
+    "America/Sao_Paulo": {
+      "name": "Brasilia Time",
+      "latitude": -22.983333333328773,
+      "longitude": -43.24999999999082
+    },
+    "America/Scoresbysund": {
+      "name": "East Greenland Time",
+      "latitude": 70.49166666667725,
+      "longitude": -21.949999999989373
+    },
+    "America/Sitka": {
+      "name": "Sitka, America",
+      "latitude": 55.35000000000955,
+      "longitude": -131.68333333333004
+    },
+    "America/St_Barthelemy": {
+      "name": "Atlantic Time",
+      "latitude": 17.89166666667367,
+      "longitude": -62.808333333325486
+    },
+    "America/St_Johns": {
+      "name": "Newfoundland Time",
+      "latitude": 47.56666666667569,
+      "longitude": -52.72499999999147
+    },
+    "America/St_Kitts": {
+      "name": "Atlantic Time",
+      "latitude": 17.141666666673615,
+      "longitude": -62.62499999999214
+    },
+    "America/St_Lucia": {
+      "name": "Atlantic Time",
+      "latitude": 14.016666666673402,
+      "longitude": -60.991666666658695
+    },
+    "America/St_Thomas": {
+      "name": "Atlantic Time",
+      "latitude": 18.325000000007037,
+      "longitude": -64.96666666665897
+    },
+    "America/St_Vincent": {
+      "name": "Atlantic Time",
+      "latitude": 13.141666666673345,
+      "longitude": -61.22499999999204
+    },
+    "America/Swift_Current": {
+      "name": "Swift Current, America",
+      "latitude": 52.78333333334271,
+      "longitude": -108.29166666666178
+    },
+    "America/Tegucigalpa": {
+      "name": "Central Time",
+      "latitude": 15.400000000006827,
+      "longitude": -87.96666666666053
+    },
+    "America/Thule": {
+      "name": "Atlantic Time",
+      "latitude": 77.79166666667774,
+      "longitude": -70.64166666665935
+    },
+    "America/Tijuana": {
+      "name": "Pacific Time",
+      "latitude": 32.50833333334133,
+      "longitude": -116.85833333332903
+    },
+    "America/Toronto": {
+      "name": "Eastern Time",
+      "latitude": 43.666666666675425,
+      "longitude": -79.38333333332662
+    },
+    "America/Tortola": {
+      "name": "Atlantic Time",
+      "latitude": 18.44166666667371,
+      "longitude": -64.58333333332561
+    },
+    "America/Vancouver": {
+      "name": "Pacific Time",
+      "latitude": 49.2916666666758,
+      "longitude": -123.13333333332946
+    },
+    "America/Whitehorse": {
+      "name": "Yukon Time",
+      "latitude": 60.70833333334325,
+      "longitude": -135.0333333333303
+    },
+    "America/Winnipeg": {
+      "name": "Central Time",
+      "latitude": 49.90000000000918,
+      "longitude": -97.15833333332769
+    },
+    "America/Yakutat": {
+      "name": "Yakutat, America",
+      "latitude": 59.55833333334317,
+      "longitude": -139.7583333333306
+    },
+    "Antarctica/Casey": {
+      "name": "Australian Western Time",
+      "latitude": -67.24242424242424,
+      "longitude": 108.15151515151514
+    },
+    "Antarctica/Davis": {
+      "name": "Davis Time",
+      "latitude": -76.23076923076923,
+      "longitude": 81.85897435897436
+    },
+    "Antarctica/DumontDUrville": {
+      "name": "Dumont-d’Urville Time",
+      "latitude": -67.5,
+      "longitude": 140
+    },
+    "Antarctica/Macquarie": {
+      "name": "Macquarie, Antarctica",
+      "latitude": -54.72956977748925,
+      "longitude": 158.83130952472354
+    },
+    "Antarctica/Mawson": {
+      "name": "Mawson Time",
+      "latitude": -75.96666666666667,
+      "longitude": 65.875
+    },
+    "Antarctica/McMurdo": {
+      "name": "New Zealand Time",
+      "latitude": -84.8886292834891,
+      "longitude": 3.870716510903427
+    },
+    "Antarctica/Palmer": {
+      "name": "Chile Time",
+      "latitude": -64.65769230769232,
+      "longitude": -64.53589743589744
+    },
+    "Antarctica/Rothera": {
+      "name": "Rothera, Antarctica",
+      "latitude": -77.66735537190083,
+      "longitude": -50.44111570247934
+    },
+    "Antarctica/Syowa": {
+      "name": "Syowa Time",
+      "latitude": -75.96666666666667,
+      "longitude": 40.5
+    },
+    "Antarctica/Troll": {
+      "name": "Greenwich Mean Time",
+      "latitude": -77,
+      "longitude": 12.5
+    },
+    "Antarctica/Vostok": {
+      "name": "Vostok, Antarctica",
+      "latitude": -76.75913568477915,
+      "longitude": 99.48109310454402
+    },
+    "Arctic/Longyearbyen": {
+      "name": "Central European Time",
+      "latitude": 78.60000000001114,
+      "longitude": 19.525000000012895
+    },
+    "Asia/Aden": {
+      "name": "Arabian Time",
+      "latitude": 15.358333333340155,
+      "longitude": 44.20833333334791
+    },
+    "Asia/Almaty": {
+      "name": "East Kazakhstan Time",
+      "latitude": 43.316666666675395,
+      "longitude": 76.85000000001679
+    },
+    "Asia/Amman": {
+      "name": "Asia/Amman",
+      "latitude": 31.925000000007955,
+      "longitude": 35.916666666680676
+    },
+    "Asia/Anadyr": {
+      "name": "Anadyr, Asia",
+      "latitude": 64.72500000001018,
+      "longitude": 177.42500000002295
+    },
+    "Asia/Aqtau": {
+      "name": "Aqtau, Asia",
+      "latitude": 43.691666666675424,
+      "longitude": 51.450000000015066
+    },
+    "Asia/Aqtobe": {
+      "name": "West Kazakhstan Time",
+      "latitude": 51.150000000009264,
+      "longitude": 58.33333333334887
+    },
+    "Asia/Ashgabat": {
+      "name": "Turkmenistan Time",
+      "latitude": 37.983333333341704,
+      "longitude": 58.466666666682215
+    },
+    "Asia/Atyrau": {
+      "name": "Atyrau, Asia",
+      "latitude": 47.37500000000901,
+      "longitude": 52.15833333334845
+    },
+    "Asia/Baghdad": {
+      "name": "Arabian Time",
+      "latitude": 33.24166666667471,
+      "longitude": 44.45833333334792
+    },
+    "Asia/Bahrain": {
+      "name": "Arabian Time",
+      "latitude": 26.22500000000757,
+      "longitude": 50.56666666668168
+    },
+    "Asia/Baku": {
+      "name": "Azerbaijan Time",
+      "latitude": 40.40000000000853,
+      "longitude": 49.83333333334829
+    },
+    "Asia/Bangkok": {
+      "name": "Indochina Time",
+      "latitude": 21.016666666673885,
+      "longitude": 105.82500000001808
+    },
+    "Asia/Barnaul": {
+      "name": "Barnaul, Asia",
+      "latitude": 53.5666666666761,
+      "longitude": 83.82500000001727
+    },
+    "Asia/Beirut": {
+      "name": "Eastern European Time",
+      "latitude": 33.841666666674755,
+      "longitude": 35.50000000001398
+    },
+    "Asia/Bishkek": {
+      "name": "Kyrgyzstan Time",
+      "latitude": 42.8500000000087,
+      "longitude": 74.5666666666833
+    },
+    "Asia/Brunei": {
+      "name": "Brunei Darussalam Time",
+      "latitude": 4.875000000006111,
+      "longitude": 114.92500000001868
+    },
+    "Asia/Chita": {
+      "name": "Yakutsk Time",
+      "latitude": 52.01666666667599,
+      "longitude": 113.46666666668526
+    },
+    "Asia/Colombo": {
+      "name": "India Time",
+      "latitude": 6.941666666672916,
+      "longitude": 79.85833333335033
+    },
+    "Asia/Damascus": {
+      "name": "Asia/Damascus",
+      "latitude": 33.45833333334139,
+      "longitude": 36.30000000001404
+    },
+    "Asia/Dhaka": {
+      "name": "Bangladesh Time",
+      "latitude": 23.725000000007398,
+      "longitude": 90.40000000001703
+    },
+    "Asia/Dili": {
+      "name": "East Timor Time",
+      "latitude": -8.541666666661124,
+      "longitude": 125.55000000001942
+    },
+    "Asia/Dubai": {
+      "name": "Gulf Time",
+      "latitude": 25.40833333334085,
+      "longitude": 55.42500000001534
+    },
+    "Asia/Dushanbe": {
+      "name": "Tajikistan Time",
+      "latitude": 38.55833333334174,
+      "longitude": 68.78333333334959
+    },
+    "Asia/Famagusta": {
+      "name": "Famagusta, Asia",
+      "latitude": 35.175000000008176,
+      "longitude": 33.316666666680504
+    },
+    "Asia/Gaza": {
+      "name": "Gaza, Asia",
+      "latitude": 31.50000000000793,
+      "longitude": 34.48333333334725
+    },
+    "Asia/Hebron": {
+      "name": "Eastern European Time",
+      "latitude": 31.733333333341278,
+      "longitude": 35.133333333347295
+    },
+    "Asia/Ho_Chi_Minh": {
+      "name": "Indochina Time",
+      "latitude": 10.766666666673189,
+      "longitude": 106.70000000001814
+    },
+    "Asia/Hong_Kong": {
+      "name": "Hong Kong Time",
+      "latitude": 22.425000000007316,
+      "longitude": 114.21666666668531
+    },
+    "Asia/Hovd": {
+      "name": "Hovd Time",
+      "latitude": 48.95833333334245,
+      "longitude": 89.99166666668435
+    },
+    "Asia/Irkutsk": {
+      "name": "Irkutsk Time",
+      "latitude": 52.316666666676014,
+      "longitude": 104.49166666668465
+    },
+    "Asia/Jakarta": {
+      "name": "Western Indonesia Time",
+      "latitude": -6.849999999994341,
+      "longitude": 107.6000000000182
+    },
+    "Asia/Jayapura": {
+      "name": "Eastern Indonesia Time",
+      "latitude": -3.666666666660791,
+      "longitude": 128.3000000000196
+    },
+    "Asia/Jerusalem": {
+      "name": "Israel Time",
+      "latitude": 32.07500000000797,
+      "longitude": 34.82500000001394
+    },
+    "Asia/Kabul": {
+      "name": "Afghanistan Time",
+      "latitude": 36.73333333334162,
+      "longitude": 67.10000000001614
+    },
+    "Asia/Kamchatka": {
+      "name": "Petropavlovsk-Kamchatski Time",
+      "latitude": 53.13333333334273,
+      "longitude": 158.91666666668834
+    },
+    "Asia/Karachi": {
+      "name": "Pakistan Time",
+      "latitude": 24.925000000007486,
+      "longitude": 67.05833333334947
+    },
+    "Asia/Kathmandu": {
+      "name": "Nepal Time",
+      "latitude": 27.74166666667434,
+      "longitude": 85.31666666668404
+    },
+    "Asia/Khandyga": {
+      "name": "Khandyga, Asia",
+      "latitude": 61.39166666667663,
+      "longitude": 134.47500000002003
+    },
+    "Asia/Kolkata": {
+      "name": "India Time",
+      "latitude": 22.49166666667398,
+      "longitude": 88.30000000001758
+    },
+    "Asia/Krasnoyarsk": {
+      "name": "Krasnoyarsk, Asia",
+      "latitude": 55.28333333334288,
+      "longitude": 89.81666666668434
+    },
+    "Asia/Kuala_Lumpur": {
+      "name": "Malaysia Time",
+      "latitude": 1.458333333339212,
+      "longitude": 103.77500000001794
+    },
+    "Asia/Kuching": {
+      "name": "Kuching, Asia",
+      "latitude": 5.850000000006176,
+      "longitude": 116.0333333333521
+    },
+    "Asia/Kuwait": {
+      "name": "Arabian Time",
+      "latitude": 29.34166666667445,
+      "longitude": 47.9916666666815
+    },
+    "Asia/Macau": {
+      "name": "China Time",
+      "latitude": 22.21666666667396,
+      "longitude": 113.5500000000186
+    },
+    "Asia/Magadan": {
+      "name": "Magadan, Asia",
+      "latitude": 59.9583333333432,
+      "longitude": 151.0833333333545
+    },
+    "Asia/Makassar": {
+      "name": "Central Indonesia Time",
+      "latitude": -5.158333333327559,
+      "longitude": 119.48333333335233
+    },
+    "Asia/Manila": {
+      "name": "Philippine Time",
+      "latitude": 11.241666666673211,
+      "longitude": 125.00833333335271
+    },
+    "Asia/Muscat": {
+      "name": "Gulf Time",
+      "latitude": 23.566666666674053,
+      "longitude": 58.50000000001555
+    },
+    "Asia/Nicosia": {
+      "name": "Eastern European Time",
+      "latitude": 34.700000000008146,
+      "longitude": 33.041666666680484
+    },
+    "Asia/Novokuznetsk": {
+      "name": "Novokuznetsk, Asia",
+      "latitude": 55.400000000009555,
+      "longitude": 86.07500000001743
+    },
+    "Asia/Novosibirsk": {
+      "name": "Novosibirsk Time",
+      "latitude": 55.016666666676194,
+      "longitude": 82.78333333335054
+    },
+    "Asia/Omsk": {
+      "name": "Omsk Time",
+      "latitude": 55.10000000000954,
+      "longitude": 73.25833333334988
+    },
+    "Asia/Oral": {
+      "name": "Oral, Asia",
+      "latitude": 50.7666666666759,
+      "longitude": 50.95000000001504
+    },
+    "Asia/Phnom_Penh": {
+      "name": "Indochina Time",
+      "latitude": 11.566666666673243,
+      "longitude": 104.91666666668468
+    },
+    "Asia/Pontianak": {
+      "name": "Pontianak, Asia",
+      "latitude": -0.18333333332722093,
+      "longitude": 109.38333333335164
+    },
+    "Asia/Pyongyang": {
+      "name": "Korean Time",
+      "latitude": 39.06666666667511,
+      "longitude": 125.7166666666861
+    },
+    "Asia/Qatar": {
+      "name": "Arabian Time",
+      "latitude": 25.283333333340835,
+      "longitude": 51.525000000015076
+    },
+    "Asia/Qostanay": {
+      "name": "Qostanay, Asia",
+      "latitude": 53.97500000000946,
+      "longitude": 61.61666666668243
+    },
+    "Asia/Qyzylorda": {
+      "name": "Qyzylorda, Asia",
+      "latitude": 45.22500000000886,
+      "longitude": 65.125000000016
+    },
+    "Asia/Riyadh": {
+      "name": "Arabian Time",
+      "latitude": 26.22500000000757,
+      "longitude": 50.23333333334832
+    },
+    "Asia/Sakhalin": {
+      "name": "Sakhalin Time",
+      "latitude": 47.20833333334233,
+      "longitude": 142.7250000000206
+    },
+    "Asia/Samarkand": {
+      "name": "Samarkand, Asia",
+      "latitude": 38.10000000000838,
+      "longitude": 68.37500000001621
+    },
+    "Asia/Seoul": {
+      "name": "Korean Time",
+      "latitude": 37.516666666675,
+      "longitude": 126.85833333335285
+    },
+    "Asia/Shanghai": {
+      "name": "China Time",
+      "latitude": 24.500000000007446,
+      "longitude": 118.12500000001891
+    },
+    "Asia/Singapore": {
+      "name": "Singapore Time",
+      "latitude": 1.391666666672549,
+      "longitude": 103.90000000001794
+    },
+    "Asia/Srednekolymsk": {
+      "name": "Srednekolymsk, Asia",
+      "latitude": 50.52500000000922,
+      "longitude": 155.8333333333548
+    },
+    "Asia/Taipei": {
+      "name": "Taipei Time",
+      "latitude": 25.008333333340815,
+      "longitude": 121.50833333335248
+    },
+    "Asia/Tashkent": {
+      "name": "Uzbekistan Time",
+      "latitude": 41.11666666667525,
+      "longitude": 69.28333333334962
+    },
+    "Asia/Tbilisi": {
+      "name": "Georgia Time",
+      "latitude": 41.65833333334195,
+      "longitude": 41.66666666668107
+    },
+    "Asia/Tehran": {
+      "name": "Iran Time",
+      "latitude": 35.5000000000082,
+      "longitude": 51.166666666681714
+    },
+    "Asia/Thimphu": {
+      "name": "Bhutan Time",
+      "latitude": 26.816666666674273,
+      "longitude": 91.61666666668377
+    },
+    "Asia/Tokyo": {
+      "name": "Japan Time",
+      "latitude": 35.550000000008204,
+      "longitude": 133.23333333335327
+    },
+    "Asia/Tomsk": {
+      "name": "Tomsk, Asia",
+      "latitude": 56.6166666666763,
+      "longitude": 85.00000000001735
+    },
+    "Asia/Ulaanbaatar": {
+      "name": "Ulaanbaatar Time",
+      "latitude": 47.900000000009044,
+      "longitude": 106.80000000001814
+    },
+    "Asia/Urumqi": {
+      "name": "China Time",
+      "latitude": 43.81666666667543,
+      "longitude": 87.55833333335086
+    },
+    "Asia/Ust-Nera": {
+      "name": "Ust-Nera, Asia",
+      "latitude": 63.61666666667678,
+      "longitude": 145.5750000000208
+    },
+    "Asia/Vientiane": {
+      "name": "Indochina Time",
+      "latitude": 15.116666666673481,
+      "longitude": 105.78333333335141
+    },
+    "Asia/Vladivostok": {
+      "name": "Vladivostok Time",
+      "latitude": 48.58333333334242,
+      "longitude": 135.1333333333534
+    },
+    "Asia/Yakutsk": {
+      "name": "Yakutsk, Asia",
+      "latitude": 50.258333333342534,
+      "longitude": 127.49166666668621
+    },
+    "Asia/Yangon": {
+      "name": "Myanmar Time",
+      "latitude": 16.808333333340258,
+      "longitude": 96.12500000001741
+    },
+    "Asia/Yekaterinburg": {
+      "name": "Yekaterinburg Time",
+      "latitude": 53.68333333334277,
+      "longitude": 56.04166666668205
+    },
+    "Asia/Yerevan": {
+      "name": "Armenia Time",
+      "latitude": 40.19166666667518,
+      "longitude": 44.51666666668127
+    },
+    "Atlantic/Azores": {
+      "name": "Azores Time",
+      "latitude": 37.816666666675026,
+      "longitude": -25.583333333322955
+    },
+    "Atlantic/Bermuda": {
+      "name": "Atlantic Time",
+      "latitude": 32.266666666674645,
+      "longitude": -64.79166666665895
+    },
+    "Atlantic/Canary": {
+      "name": "Western European Time",
+      "latitude": 28.10833333334103,
+      "longitude": -15.441666666655593
+    },
+    "Atlantic/Cape_Verde": {
+      "name": "Cape Verde Time",
+      "latitude": 15.06666666667347,
+      "longitude": -23.616666666656158
+    },
+    "Atlantic/Faroe": {
+      "name": "Western European Time",
+      "latitude": 62.11666666667668,
+      "longitude": -6.749999999988333
+    },
+    "Atlantic/Madeira": {
+      "name": "Madeira, Atlantic",
+      "latitude": 32.650000000008006,
+      "longitude": -16.941666666655692
+    },
+    "Atlantic/Reykjavik": {
+      "name": "Greenwich Mean Time",
+      "latitude": 64.16666666667682,
+      "longitude": -21.99999999998937
+    },
+    "Atlantic/South_Georgia": {
+      "name": "South Georgia Time",
+      "latitude": -56.01894719348745,
+      "longitude": -32.37464058245325
+    },
+    "Atlantic/St_Helena": {
+      "name": "Greenwich Mean Time",
+      "latitude": -15.92499999999496,
+      "longitude": -5.72499999998827
+    },
+    "Atlantic/Stanley": {
+      "name": "Falkland Islands Time",
+      "latitude": -51.71666666666406,
+      "longitude": -57.89166666665849
+    },
+    "Australia/Adelaide": {
+      "name": "Australian Central Time",
+      "latitude": -34.97499999999626,
+      "longitude": 138.50833333335362
+    },
+    "Australia/Brisbane": {
+      "name": "Australian Eastern Time",
+      "latitude": -27.466666666662412,
+      "longitude": 153.03333333335462
+    },
+    "Australia/Broken_Hill": {
+      "name": "Broken Hill, Australia",
+      "latitude": -31.941666666662716,
+      "longitude": 141.45833333335383
+    },
+    "Australia/Darwin": {
+      "name": "Australian Central Time",
+      "latitude": -12.366666666661384,
+      "longitude": 130.85000000001978
+    },
+    "Australia/Eucla": {
+      "name": "Australian Central Western Time",
+      "latitude": -31.64999999999603,
+      "longitude": 129.008333333353
+    },
+    "Australia/Hobart": {
+      "name": "Hobart, Australia",
+      "latitude": -42.874999999996795,
+      "longitude": 147.30833333335423
+    },
+    "Australia/Lindeman": {
+      "name": "Lindeman, Australia",
+      "latitude": -20.34999999999526,
+      "longitude": 148.96666666668767
+    },
+    "Australia/Lord_Howe": {
+      "name": "Lord Howe Time",
+      "latitude": -31.574999999996024,
+      "longitude": 159.09166666668835
+    },
+    "Australia/Melbourne": {
+      "name": "Melbourne, Australia",
+      "latitude": -37.81666666666312,
+      "longitude": 144.95833333335406
+    },
+    "Australia/Perth": {
+      "name": "Australian Western Time",
+      "latitude": -31.958333333329385,
+      "longitude": 115.86666666668542
+    },
+    "Australia/Sydney": {
+      "name": "Australian Eastern Time",
+      "latitude": -33.87499999999618,
+      "longitude": 151.20000000002116
+    },
+    "Etc/UTC": {
+      "name": "UTC, Etc",
+      "latitude": -77.98958333333334,
+      "longitude": -11.130208333333332
+    },
+    "Europe/Amsterdam": {
+      "name": "Central European Time",
+      "latitude": 52.10000000000933,
+      "longitude": 4.283333333345192
+    },
+    "Europe/Andorra": {
+      "name": "Central European Time",
+      "latitude": 42.525000000008674,
+      "longitude": 1.5333333333450052
+    },
+    "Europe/Astrakhan": {
+      "name": "Astrakhan, Europe",
+      "latitude": 46.466666666675614,
+      "longitude": 47.958333333348165
+    },
+    "Europe/Athens": {
+      "name": "Eastern European Time",
+      "latitude": 40.658333333341886,
+      "longitude": 22.93333333334646
+    },
+    "Europe/Belgrade": {
+      "name": "Central European Time",
+      "latitude": 44.80000000000883,
+      "longitude": 20.46666666667963
+    },
+    "Europe/Berlin": {
+      "name": "Central European Time",
+      "latitude": 47.59166666667569,
+      "longitude": 7.591666666678751
+    },
+    "Europe/Bratislava": {
+      "name": "Central European Time",
+      "latitude": 48.71666666667576,
+      "longitude": 21.208333333346346
+    },
+    "Europe/Brussels": {
+      "name": "Central European Time",
+      "latitude": 50.83333333334258,
+      "longitude": 4.34166666667853
+    },
+    "Europe/Bucharest": {
+      "name": "Eastern European Time",
+      "latitude": 44.308333333342134,
+      "longitude": 27.32500000001343
+    },
+    "Europe/Budapest": {
+      "name": "Central European Time",
+      "latitude": 47.50833333334235,
+      "longitude": 19.075000000012867
+    },
+    "Europe/Busingen": {
+      "name": "Busingen, Europe",
+      "latitude": 47.70833333334237,
+      "longitude": 8.666666666678823
+    },
+    "Europe/Chisinau": {
+      "name": "Eastern European Time",
+      "latitude": 46.850000000008976,
+      "longitude": 29.64166666668025
+    },
+    "Europe/Copenhagen": {
+      "name": "Central European Time",
+      "latitude": 55.70833333334291,
+      "longitude": 12.541666666679088
+    },
+    "Europe/Dublin": {
+      "name": "Greenwich Mean Time",
+      "latitude": 53.35833333334275,
+      "longitude": -6.25833333332163
+    },
+    "Europe/Gibraltar": {
+      "name": "Central European Time",
+      "latitude": 36.11666666667491,
+      "longitude": -5.349999999988242
+    },
+    "Europe/Guernsey": {
+      "name": "Greenwich Mean Time",
+      "latitude": 49.46666666667582,
+      "longitude": -2.53333333332138
+    },
+    "Europe/Helsinki": {
+      "name": "Eastern European Time",
+      "latitude": 60.27500000000988,
+      "longitude": 25.216666666679952
+    },
+    "Europe/Isle_of_Man": {
+      "name": "Greenwich Mean Time",
+      "latitude": 54.233333333342806,
+      "longitude": -4.691666666654868
+    },
+    "Europe/Istanbul": {
+      "name": "Turkey Time",
+      "latitude": 41.03333333334191,
+      "longitude": 28.8666666666802
+    },
+    "Europe/Jersey": {
+      "name": "Greenwich Mean Time",
+      "latitude": 49.208333333342466,
+      "longitude": -2.1249999999880202
+    },
+    "Europe/Kaliningrad": {
+      "name": "Eastern European Time",
+      "latitude": 54.68333333334284,
+      "longitude": 20.616666666679638
+    },
+    "Europe/Kyiv": {
+      "name": "Eastern European Time",
+      "latitude": 47.56666666667569,
+      "longitude": 34.36666666668057
+    },
+    "Europe/Kirov": {
+      "name": "Kirov, Europe",
+      "latitude": 58.575000000009766,
+      "longitude": 49.95000000001497
+    },
+    "Europe/Lisbon": {
+      "name": "Western European Time",
+      "latitude": 38.75833333334175,
+      "longitude": -9.283333333321849
+    },
+    "Europe/Ljubljana": {
+      "name": "Central European Time",
+      "latitude": 45.53333333334221,
+      "longitude": 13.558333333345823
+    },
+    "Europe/London": {
+      "name": "Greenwich Mean Time",
+      "latitude": 51.491666666675954,
+      "longitude": -0.14166666665455807
+    },
+    "Europe/Luxembourg": {
+      "name": "Central European Time",
+      "latitude": 49.60833333334249,
+      "longitude": 6.125000000011984
+    },
+    "Europe/Madrid": {
+      "name": "Central European Time",
+      "latitude": 39.483333333341804,
+      "longitude": -0.4249999999879037
+    },
+    "Europe/Malta": {
+      "name": "Central European Time",
+      "latitude": 35.925000000008225,
+      "longitude": 14.500000000012555
+    },
+    "Europe/Mariehamn": {
+      "name": "Eastern European Time",
+      "latitude": 60.083333333343205,
+      "longitude": 19.95833333334626
+    },
+    "Europe/Minsk": {
+      "name": "Moscow Time",
+      "latitude": 53.86666666667612,
+      "longitude": 27.625000000013447
+    },
+    "Europe/Monaco": {
+      "name": "Central European Time",
+      "latitude": 43.733333333342095,
+      "longitude": 7.416666666678739
+    },
+    "Europe/Moscow": {
+      "name": "Moscow Time",
+      "latitude": 57.991666666676394,
+      "longitude": 38.83333333334755
+    },
+    "Europe/Oslo": {
+      "name": "Central European Time",
+      "latitude": 58.96666666667646,
+      "longitude": 5.725000000011957
+    },
+    "Europe/Paris": {
+      "name": "Central European Time",
+      "latitude": 48.866666666675776,
+      "longitude": 2.3666666666783955
+    },
+    "Europe/Podgorica": {
+      "name": "Central European Time",
+      "latitude": 42.08333333334198,
+      "longitude": 19.38333333334622
+    },
+    "Europe/Prague": {
+      "name": "Central European Time",
+      "latitude": 50.058333333342524,
+      "longitude": 14.675000000012567
+    },
+    "Europe/Riga": {
+      "name": "Eastern European Time",
+      "latitude": 56.966666666676325,
+      "longitude": 24.27500000001322
+    },
+    "Europe/Rome": {
+      "name": "Central European Time",
+      "latitude": 40.858333333341896,
+      "longitude": 14.258333333345872
+    },
+    "Europe/Samara": {
+      "name": "Samara Time",
+      "latitude": 53.275000000009406,
+      "longitude": 50.26666666668166
+    },
+    "Europe/San_Marino": {
+      "name": "Central European Time",
+      "latitude": 43.97500000000878,
+      "longitude": 12.466666666679084
+    },
+    "Europe/Sarajevo": {
+      "name": "Central European Time",
+      "latitude": 43.87500000000877,
+      "longitude": 18.375000000012818
+    },
+    "Europe/Saratov": {
+      "name": "Saratov, Europe",
+      "latitude": 51.6750000000093,
+      "longitude": 45.61666666668134
+    },
+    "Europe/Simferopol": {
+      "name": "Moscow Time",
+      "latitude": 45.200000000008856,
+      "longitude": 33.35833333334717
+    },
+    "Europe/Skopje": {
+      "name": "Central European Time",
+      "latitude": 41.958333333341976,
+      "longitude": 21.400000000013023
+    },
+    "Europe/Sofia": {
+      "name": "Eastern European Time",
+      "latitude": 42.14166666667532,
+      "longitude": 24.800000000013256
+    },
+    "Europe/Stockholm": {
+      "name": "Central European Time",
+      "latitude": 59.32500000000982,
+      "longitude": 18.05833333334613
+    },
+    "Europe/Tallinn": {
+      "name": "Eastern European Time",
+      "latitude": 59.358333333343154,
+      "longitude": 27.3916666666801
+    },
+    "Europe/Tirane": {
+      "name": "Central European Time",
+      "latitude": 41.300000000008595,
+      "longitude": 19.83333333334625
+    },
+    "Europe/Ulyanovsk": {
+      "name": "Ulyanovsk, Europe",
+      "latitude": 54.19166666667614,
+      "longitude": 49.47500000001494
+    },
+    "Europe/Vaduz": {
+      "name": "Central European Time",
+      "latitude": 47.23333333334233,
+      "longitude": 9.558333333345551
+    },
+    "Europe/Vatican": {
+      "name": "Central European Time",
+      "latitude": 41.90347777332519,
+      "longitude": 12.452895905950765
+    },
+    "Europe/Vienna": {
+      "name": "Central European Time",
+      "latitude": 48.241666666675734,
+      "longitude": 16.200000000012672
+    },
+    "Europe/Vilnius": {
+      "name": "Eastern European Time",
+      "latitude": 54.94166666667619,
+      "longitude": 23.925000000013195
+    },
+    "Europe/Volgograd": {
+      "name": "Volgograd, Europe",
+      "latitude": 48.90833333334245,
+      "longitude": 44.75833333334795
+    },
+    "Europe/Warsaw": {
+      "name": "Central European Time",
+      "latitude": 51.77500000000931,
+      "longitude": 19.458333333346225
+    },
+    "Europe/Zagreb": {
+      "name": "Central European Time",
+      "latitude": 45.32500000000887,
+      "longitude": 14.483333333345886
+    },
+    "Europe/Zurich": {
+      "name": "Central European Time",
+      "latitude": 46.21666666667559,
+      "longitude": 6.141666666678653
+    },
+    "Indian/Antananarivo": {
+      "name": "East Africa Time",
+      "latitude": -18.84999999999516,
+      "longitude": 47.49166666668147
+    },
+    "Indian/Chagos": {
+      "name": "Indian Ocean Time",
+      "latitude": -6.064929765310582,
+      "longitude": 71.90663035047747
+    },
+    "Indian/Christmas": {
+      "name": "Christmas Island Time",
+      "latitude": -10.41666666666125,
+      "longitude": 105.67500000001806
+    },
+    "Indian/Cocos": {
+      "name": "Cocos Islands Time",
+      "latitude": -12.099999999994699,
+      "longitude": 96.8833333333508
+    },
+    "Indian/Comoro": {
+      "name": "East Africa Time",
+      "latitude": -12.266666666661376,
+      "longitude": 43.73333333334788
+    },
+    "Indian/Kerguelen": {
+      "name": "French Southern & Antarctic Time",
+      "latitude": -47.802305613578184,
+      "longitude": 66.21470488173631
+    },
+    "Indian/Mahe": {
+      "name": "Seychelles Time",
+      "latitude": -4.641666666660858,
+      "longitude": 55.47500000001534
+    },
+    "Indian/Maldives": {
+      "name": "Maldives Time",
+      "latitude": 5.666666666672839,
+      "longitude": 73.02500000001653
+    },
+    "Indian/Mauritius": {
+      "name": "Mauritius Time",
+      "latitude": -20.15833333332858,
+      "longitude": 57.508333333348816
+    },
+    "Indian/Mayotte": {
+      "name": "East Africa Time",
+      "latitude": -12.799999999994746,
+      "longitude": 45.26666666668132
+    },
+    "Indian/Reunion": {
+      "name": "Réunion Time",
+      "latitude": -20.941666666661966,
+      "longitude": 55.30833333334866
+    },
+    "Pacific/Apia": {
+      "name": "Apia Time",
+      "latitude": -13.891666666661488,
+      "longitude": -171.8416666666661
+    },
+    "Pacific/Auckland": {
+      "name": "New Zealand Time",
+      "latitude": -36.849999999996385,
+      "longitude": 174.7583333333561
+    },
+    "Pacific/Bougainville": {
+      "name": "Bougainville Time",
+      "latitude": -4.541666666660851,
+      "longitude": 159.31666666668838
+    },
+    "Pacific/Chatham": {
+      "name": "Chatham Time",
+      "latitude": -43.94999999999687,
+      "longitude": -176.56666666666644
+    },
+    "Pacific/Chuuk": {
+      "name": "Chuuk Time",
+      "latitude": 5.575000000006156,
+      "longitude": 153.56666666668798
+    },
+    "Pacific/Easter": {
+      "name": "Easter Island Time",
+      "latitude": -27.116666666662386,
+      "longitude": -109.32499999999519
+    },
+    "Pacific/Efate": {
+      "name": "Vanuatu Time",
+      "latitude": -17.716666666661748,
+      "longitude": 168.30833333335568
+    },
+    "Pacific/Fakaofo": {
+      "name": "Tokelau Time",
+      "latitude": -8.574999999994459,
+      "longitude": -172.46666666666616
+    },
+    "Pacific/Fiji": {
+      "name": "Fiji Time",
+      "latitude": -18.074999999995104,
+      "longitude": 178.50000000002302
+    },
+    "Pacific/Funafuti": {
+      "name": "Tuvalu Time",
+      "latitude": -8.516666666661122,
+      "longitude": 179.19166666668974
+    },
+    "Pacific/Galapagos": {
+      "name": "Galapagos Time",
+      "latitude": -0.7333333333272584,
+      "longitude": -90.31666666666057
+    },
+    "Pacific/Gambier": {
+      "name": "Gambier Time",
+      "latitude": -22.024999999995373,
+      "longitude": -136.18333333333035
+    },
+    "Pacific/Guadalcanal": {
+      "name": "Solomon Islands Time",
+      "latitude": -8.466666666661117,
+      "longitude": 160.85833333335515
+    },
+    "Pacific/Guam": {
+      "name": "Chamorro Time",
+      "latitude": 13.500000000006708,
+      "longitude": 144.77500000002073
+    },
+    "Pacific/Honolulu": {
+      "name": "Hawaii-Aleutian Time",
+      "latitude": 21.30833333334057,
+      "longitude": -157.84166666666516
+    },
+    "Pacific/Kanton": {
+      "name": "Phoenix Islands Time",
+      "latitude": -2.8166666666607334,
+      "longitude": -171.7166666666661
+    },
+    "Pacific/Kiritimati": {
+      "name": "Line Islands Time",
+      "latitude": 2.050000000005923,
+      "longitude": -157.49999999999847
+    },
+    "Pacific/Kosrae": {
+      "name": "Kosrae Time",
+      "latitude": 5.333333333339482,
+      "longitude": 163.01666666668865
+    },
+    "Pacific/Kwajalein": {
+      "name": "Kwajalein, Pacific",
+      "latitude": 9.1500000000064,
+      "longitude": 167.18333333335556
+    },
+    "Pacific/Majuro": {
+      "name": "Marshall Islands Time",
+      "latitude": 7.2250000000062755,
+      "longitude": 171.05000000002252
+    },
+    "Pacific/Marquesas": {
+      "name": "Marquesas Time",
+      "latitude": -9.358333333327845,
+      "longitude": -140.0333333333306
+    },
+    "Pacific/Midway": {
+      "name": "Samoa Time",
+      "latitude": 28.322074771544933,
+      "longitude": -177.83423588591296
+    },
+    "Pacific/Nauru": {
+      "name": "Nauru Time",
+      "latitude": -0.5416666666605786,
+      "longitude": 166.90833333335556
+    },
+    "Pacific/Niue": {
+      "name": "Niue Time",
+      "latitude": -19.133333333328512,
+      "longitude": -169.89166666666597
+    },
+    "Pacific/Norfolk": {
+      "name": "Norfolk Island Time",
+      "latitude": -29.033333333329185,
+      "longitude": 167.9500000000223
+    },
+    "Pacific/Noumea": {
+      "name": "New Caledonia Time",
+      "latitude": -22.29166666666206,
+      "longitude": 166.28333333335553
+    },
+    "Pacific/Pago_Pago": {
+      "name": "Samoa Time",
+      "latitude": -14.32499999999485,
+      "longitude": -170.74999999999937
+    },
+    "Pacific/Palau": {
+      "name": "Palau Time",
+      "latitude": 4.325000000006071,
+      "longitude": 132.3083333333532
+    },
+    "Pacific/Pitcairn": {
+      "name": "Pitcairn Time",
+      "latitude": -24.399999999995536,
+      "longitude": -128.3499999999965
+    },
+    "Pacific/Pohnpei": {
+      "name": "Pohnpei, Pacific",
+      "latitude": 6.966666666672921,
+      "longitude": 158.20833333335497
+    },
+    "Pacific/Port_Moresby": {
+      "name": "Papua New Guinea Time",
+      "latitude": -9.358333333327845,
+      "longitude": 147.17500000002087
+    },
+    "Pacific/Rarotonga": {
+      "name": "Cook Islands Time",
+      "latitude": -21.199999999995317,
+      "longitude": -159.75833333333196
+    },
+    "Pacific/Saipan": {
+      "name": "Chamorro Time",
+      "latitude": 15.20833333334015,
+      "longitude": 145.71666666668744
+    },
+    "Pacific/Tahiti": {
+      "name": "Tahiti Time",
+      "latitude": -17.56666666666174,
+      "longitude": -149.54999999999794
+    },
+    "Pacific/Tarawa": {
+      "name": "Gilbert Islands Time",
+      "latitude": 1.3666666666725433,
+      "longitude": 172.9166666666893
+    },
+    "Pacific/Tongatapu": {
+      "name": "Tonga Time",
+      "latitude": -21.09166666666198,
+      "longitude": -175.34999999999968
+    },
+    "Pacific/Wake": {
+      "name": "Wake Island Time",
+      "latitude": 19.297160690823677,
+      "longitude": 166.62913503264085
+    },
+    "Pacific/Wallis": {
+      "name": "Wallis & Futuna Time",
+      "latitude": -13.283333333328113,
+      "longitude": -176.23333333333306
+    },
+    "Etc/GMT-4": {
+      "latitude": 0,
+      "longitude": -60
+    },
+    "Etc/GMT+1": {
+      "latitude": 0,
+      "longitude": 15
+    },
+    "Etc/GMT+6": {
+      "latitude": 0,
+      "longitude": 90
+    },
+    "Etc/GMT-6": {
+      "latitude": 0,
+      "longitude": -90
+    },
+    "Etc/GMT-11": {
+      "latitude": 0,
+      "longitude": -165
+    },
+    "Etc/GMT+12": {
+      "latitude": 0,
+      "longitude": 180
+    },
+    "Etc/GMT-3": {
+      "latitude": 0,
+      "longitude": -45
+    },
+    "Etc/GMT+10": {
+      "latitude": 0,
+      "longitude": 150
+    },
+    "Etc/GMT-14": {
+      "latitude": 0,
+      "longitude": -210
+    },
+    "Etc/GMT+3": {
+      "latitude": 0,
+      "longitude": 45
+    },
+    "Etc/GMT+5": {
+      "latitude": 0,
+      "longitude": 75
+    },
+    "Etc/GMT+4": {
+      "latitude": 0,
+      "longitude": 60
+    },
+    "Etc/GMT-7": {
+      "latitude": 0,
+      "longitude": -105
+    },
+    "Etc/GMT-8": {
+      "latitude": 0,
+      "longitude": -120
+    },
+    "Etc/GMT-2": {
+      "latitude": 0,
+      "longitude": -30
+    },
+    "Etc/GMT-9": {
+      "latitude": 0,
+      "longitude": -135
+    },
+    "Etc/GMT+7": {
+      "latitude": 0,
+      "longitude": 105
+    },
+    "Etc/GMT-12": {
+      "latitude": 0,
+      "longitude": -180
+    },
+    "Etc/GMT-13": {
+      "latitude": 0,
+      "longitude": -195
+    },
+    "Etc/GMT+2": {
+      "latitude": 0,
+      "longitude": 30
+    },
+    "Etc/GMT+8": {
+      "latitude": 0,
+      "longitude": 120
+    },
+    "Etc/GMT+9": {
+      "latitude": 0,
+      "longitude": 135
+    },
+    "Etc/GMT+11": {
+      "latitude": 0,
+      "longitude": 165
+    },
+    "Etc/GMT-1": {
+      "latitude": 0,
+      "longitude": -15
+    },
+    "Etc/GMT-5": {
+      "latitude": 0,
+      "longitude": -75
+    },
+    "Etc/GMT-10": {
+      "latitude": 0,
+      "longitude": -150
+    }
+  },
+  "abbr": {
+    "AUS Central Standard Time": "Australia/Darwin",
+    "AUS Eastern Standard Time": "Australia/Sydney",
+    "Afghanistan Standard Time": "Asia/Kabul",
+    "Alaskan Standard Time": "America/Anchorage",
+    "Aleutian Standard Time": "America/Adak",
+    "Altai Standard Time": "Asia/Barnaul",
+    "Arab Standard Time": "Asia/Riyadh",
+    "Arabian Standard Time": "Asia/Dubai",
+    "Arabic Standard Time": "Asia/Baghdad",
+    "Argentina Standard Time": "America/Buenos_Aires",
+    "Astrakhan Standard Time": "Europe/Astrakhan",
+    "Atlantic Standard Time": "America/Halifax",
+    "Aus Central W. Standard Time": "Australia/Eucla",
+    "Azerbaijan Standard Time": "Asia/Baku",
+    "Azores Standard Time": "Atlantic/Azores",
+    "Bahia Standard Time": "America/Bahia",
+    "Bangladesh Standard Time": "Asia/Dhaka",
+    "Belarus Standard Time": "Europe/Minsk",
+    "Bougainville Standard Time": "Pacific/Bougainville",
+    "Canada Central Standard Time": "America/Regina",
+    "Cape Verde Standard Time": "Atlantic/Cape_Verde",
+    "Caucasus Standard Time": "Asia/Yerevan",
+    "Cen. Australia Standard Time": "Australia/Adelaide",
+    "Central America Standard Time": "America/Guatemala",
+    "Central Asia Standard Time": "Asia/Almaty",
+    "Central Brazilian Standard Time": "America/Cuiaba",
+    "Central Europe Standard Time": "Europe/Budapest",
+    "Central European Standard Time": "Europe/Warsaw",
+    "Central Pacific Standard Time": "Pacific/Guadalcanal",
+    "Central Standard Time (Mexico)": "America/Mexico_City",
+    "Central Standard Time": "America/Chicago",
+    "Chatham Islands Standard Time": "Pacific/Chatham",
+    "China Standard Time": "Asia/Shanghai",
+    "Cuba Standard Time": "America/Havana",
+    "Dateline Standard Time": "Etc/GMT+12",
+    "E. Africa Standard Time": "Africa/Nairobi",
+    "E. Australia Standard Time": "Australia/Brisbane",
+    "E. Europe Standard Time": "Europe/Chisinau",
+    "E. South America Standard Time": "America/Sao_Paulo",
+    "Easter Island Standard Time": "Pacific/Easter",
+    "Eastern Standard Time (Mexico)": "America/Cancun",
+    "Eastern Standard Time": "America/New_York",
+    "Egypt Standard Time": "Africa/Cairo",
+    "Ekaterinburg Standard Time": "Asia/Yekaterinburg",
+    "FLE Standard Time": "Europe/Kiev",
+    "Fiji Standard Time": "Pacific/Fiji",
+    "GMT Standard Time": "Europe/London",
+    "GTB Standard Time": "Europe/Bucharest",
+    "Georgian Standard Time": "Asia/Tbilisi",
+    "Greenland Standard Time": "America/Godthab",
+    "Greenwich Standard Time": "Atlantic/Reykjavik",
+    "Haiti Standard Time": "America/Port-au-Prince",
+    "Hawaiian Standard Time": "Pacific/Honolulu",
+    "India Standard Time": "Asia/Calcutta",
+    "Iran Standard Time": "Asia/Tehran",
+    "Israel Standard Time": "Asia/Jerusalem",
+    "Jordan Standard Time": "Asia/Amman",
+    "Kaliningrad Standard Time": "Europe/Kaliningrad",
+    "Korea Standard Time": "Asia/Seoul",
+    "Libya Standard Time": "Africa/Tripoli",
+    "Line Islands Standard Time": "Pacific/Kiritimati",
+    "Lord Howe Standard Time": "Australia/Lord_Howe",
+    "Magadan Standard Time": "Asia/Magadan",
+    "Magallanes Standard Time": "America/Punta_Arenas",
+    "Marquesas Standard Time": "Pacific/Marquesas",
+    "Mauritius Standard Time": "Indian/Mauritius",
+    "Middle East Standard Time": "Asia/Beirut",
+    "Montevideo Standard Time": "America/Montevideo",
+    "Morocco Standard Time": "Africa/Casablanca",
+    "Mountain Standard Time (Mexico)": "America/Mazatlan",
+    "Mountain Standard Time": "America/Denver",
+    "Myanmar Standard Time": "Asia/Rangoon",
+    "N. Central Asia Standard Time": "Asia/Novosibirsk",
+    "Namibia Standard Time": "Africa/Windhoek",
+    "Nepal Standard Time": "Asia/Katmandu",
+    "New Zealand Standard Time": "Pacific/Auckland",
+    "Newfoundland Standard Time": "America/St_Johns",
+    "Norfolk Standard Time": "Pacific/Norfolk",
+    "North Asia East Standard Time": "Asia/Irkutsk",
+    "North Asia Standard Time": "Asia/Krasnoyarsk",
+    "North Korea Standard Time": "Asia/Pyongyang",
+    "Omsk Standard Time": "Asia/Omsk",
+    "Pacific SA Standard Time": "America/Santiago",
+    "Pacific Standard Time (Mexico)": "America/Tijuana",
+    "Pacific Standard Time": "America/Los_Angeles",
+    "Pakistan Standard Time": "Asia/Karachi",
+    "Paraguay Standard Time": "America/Asuncion",
+    "Qyzylorda Standard Time": "Asia/Qyzylorda",
+    "Romance Standard Time": "Europe/Paris",
+    "Russia Time Zone 10": "Asia/Srednekolymsk",
+    "Russia Time Zone 11": "Asia/Kamchatka",
+    "Russia Time Zone 3": "Europe/Samara",
+    "Russian Standard Time": "Europe/Moscow",
+    "SA Eastern Standard Time": "America/Cayenne",
+    "SA Pacific Standard Time": "America/Bogota",
+    "SA Western Standard Time": "America/La_Paz",
+    "SE Asia Standard Time": "Asia/Bangkok",
+    "Saint Pierre Standard Time": "America/Miquelon",
+    "Sakhalin Standard Time": "Asia/Sakhalin",
+    "Samoa Standard Time": "Pacific/Apia",
+    "Sao Tome Standard Time": "Africa/Sao_Tome",
+    "Saratov Standard Time": "Europe/Saratov",
+    "Singapore Standard Time": "Asia/Singapore",
+    "South Africa Standard Time": "Africa/Johannesburg",
+    "South Sudan Standard Time": "Africa/Juba",
+    "Sri Lanka Standard Time": "Asia/Colombo",
+    "Sudan Standard Time": "Africa/Khartoum",
+    "Syria Standard Time": "Asia/Damascus",
+    "Taipei Standard Time": "Asia/Taipei",
+    "Tasmania Standard Time": "Australia/Hobart",
+    "Tocantins Standard Time": "America/Araguaina",
+    "Tokyo Standard Time": "Asia/Tokyo",
+    "Tomsk Standard Time": "Asia/Tomsk",
+    "Tonga Standard Time": "Pacific/Tongatapu",
+    "Transbaikal Standard Time": "Asia/Chita",
+    "Turkey Standard Time": "Europe/Istanbul",
+    "Turks And Caicos Standard Time": "America/Grand_Turk",
+    "US Eastern Standard Time": "America/Indianapolis",
+    "US Mountain Standard Time": "America/Phoenix",
+    "UTC+12": "Etc/GMT-12",
+    "UTC+13": "Etc/GMT-13",
+    "UTC": "Etc/UTC",
+    "UTC-02": "Etc/GMT+2",
+    "UTC-08": "Etc/GMT+8",
+    "UTC-09": "Etc/GMT+9",
+    "UTC-11": "Etc/GMT+11",
+    "Ulaanbaatar Standard Time": "Asia/Ulaanbaatar",
+    "Venezuela Standard Time": "America/Caracas",
+    "Vladivostok Standard Time": "Asia/Vladivostok",
+    "Volgograd Standard Time": "Europe/Volgograd",
+    "W. Australia Standard Time": "Australia/Perth",
+    "W. Central Africa Standard Time": "Africa/Lagos",
+    "W. Europe Standard Time": "Europe/Berlin",
+    "W. Mongolia Standard Time": "Asia/Hovd",
+    "West Asia Standard Time": "Asia/Tashkent",
+    "West Bank Standard Time": "Asia/Hebron",
+    "West Pacific Standard Time": "Pacific/Port_Moresby",
+    "Yakutsk Standard Time": "Asia/Yakutsk",
+    "Yukon Standard Time": "America/Whitehorse",
+    "Kamchatka Standard Time": "Asia/Kamchatka",
+    "Mid-Atlantic Standard Time": "Etc/GMT+2",
+    "-660_NUT": "Pacific/Niue",
+    "-660_SST": "Pacific/Pago_Pago",
+    "-600_CKT": "Pacific/Rarotonga",
+    "-600_HAST": "Pacific/Honolulu",
+    "-600_TAHT": "Pacific/Tahiti",
+    "-570_MART": "Pacific/Marquesas",
+    "-540_AKST": "America/Anchorage",
+    "-540_GAMT": "Pacific/Gambier",
+    "-480_PST": "America/Los_Angeles",
+    "-420_GMT-7": "America/Hermosillo",
+    "-420_MST": "America/Phoenix",
+    "-420_YT": "America/Whitehorse",
+    "-360_CST": "America/Mexico_City",
+    "-360_EAST": "Pacific/Easter",
+    "-360_GALT": "Pacific/Galapagos",
+    "-300_ACT": "America/Rio_Branco",
+    "-300_COT": "America/Bogota",
+    "-300_CST": "America/Havana",
+    "-300_EST": "America/New_York",
+    "-300_ECT": "America/Guayaquil",
+    "-300_PET": "America/Lima",
+    "-240_AMT": "America/Manaus",
+    "-240_AST": "America/Santo_Domingo",
+    "-240_BOT": "America/La_Paz",
+    "-240_CLT": "America/Santiago",
+    "-240_GYT": "America/Guyana",
+    "-240_PYT": "America/Asuncion",
+    "-240_VET": "America/Caracas",
+    "-210_NST": "America/St_Johns",
+    "-180_ART": "America/Argentina/Buenos_Aires",
+    "-180_BRT": "America/Sao_Paulo",
+    "-180_CLT": "America/Punta_Arenas",
+    "-180_FKST": "Atlantic/Stanley",
+    "-180_GFT": "America/Cayenne",
+    "-180_PM": "America/Miquelon",
+    "-180_SRT": "America/Paramaribo",
+    "-180_UYT": "America/Montevideo",
+    "-120_EGT": "America/Scoresbysund",
+    "-120_FNT": "America/Noronha",
+    "-120_GST": "Atlantic/South_Georgia",
+    "-120_WGT": "America/Nuuk",
+    "-060_AZOT": "Atlantic/Azores",
+    "-060_CVT": "Atlantic/Cape_Verde",
+    "+000_GMT": "Africa/Bamako",
+    "+000_WET": "Africa/Casablanca",
+    "+060_CAT": "Africa/Windhoek",
+    "+060_CET": "Europe/Paris",
+    "+060_WAT": "Africa/Lagos",
+    "+120_CAT": "Africa/Bujumbura",
+    "+120_EET": "Africa/Cairo",
+    "+120_IST": "Asia/Jerusalem",
+    "+120_SAST": "Africa/Johannesburg",
+    "+180_AST": "Asia/Aden",
+    "+180_GMT+3": "Asia/Damascus",
+    "+180_EAT": "Africa/Nairobi",
+    "+180_MSK": "Europe/Moscow",
+    "+180_SYOT": "Antarctica/Syowa",
+    "+180_TRT": "Europe/Istanbul",
+    "+210_IRST": "Asia/Tehran",
+    "+240_AMT": "Asia/Yerevan",
+    "+240_AZT": "Asia/Baku",
+    "+240_GET": "Asia/Tbilisi",
+    "+240_GST": "Asia/Muscat",
+    "+240_MUT": "Indian/Mauritius",
+    "+240_RET": "Indian/Reunion",
+    "+240_SAMT": "Europe/Samara",
+    "+240_SCT": "Indian/Mahe",
+    "+270_AFT": "Asia/Kabul",
+    "+300_ALMT": "Asia/Almaty",
+    "+300_FSAT": "Indian/Kerguelen",
+    "+300_MVT": "Indian/Maldives",
+    "+300_MAWT": "Antarctica/Mawson",
+    "+300_PKT": "Asia/Karachi",
+    "+300_TJT": "Asia/Dushanbe",
+    "+300_TMT": "Asia/Ashgabat",
+    "+300_UZT": "Asia/Tashkent",
+    "+300_AQTT": "Asia/Aqtobe",
+    "+300_YEKT": "Asia/Yekaterinburg",
+    "+330_IST": "Asia/Kolkata",
+    "+345_NPT": "Asia/Kathmandu",
+    "+360_BST": "Asia/Dhaka",
+    "+360_BTT": "Asia/Thimphu",
+    "+360_CST": "Asia/Urumqi",
+    "+360_IOT": "Indian/Chagos",
+    "+360_KGT": "Asia/Bishkek",
+    "+360_OMST": "Asia/Omsk",
+    "+390_CCT": "Indian/Cocos",
+    "+390_MMT": "Asia/Yangon",
+    "+420_CXT": "Indian/Christmas",
+    "+420_DAVT": "Antarctica/Davis",
+    "+420_HOVT": "Asia/Hovd",
+    "+420_ICT": "Asia/Ho_Chi_Minh",
+    "+420_NOVT": "Asia/Novosibirsk",
+    "+420_WIB": "Asia/Jakarta",
+    "+480_AWST": "Australia/Perth",
+    "+480_BNT": "Asia/Brunei",
+    "+480_WITA": "Asia/Makassar",
+    "+480_CST": "Asia/Shanghai",
+    "+480_HKT": "Asia/Hong_Kong",
+    "+480_IRKT": "Asia/Irkutsk",
+    "+480_MYT": "Asia/Kuala_Lumpur",
+    "+480_PHT": "Asia/Manila",
+    "+480_SGT": "Asia/Singapore",
+    "+480_TWT": "Asia/Taipei",
+    "+480_ULAT": "Asia/Ulaanbaatar",
+    "+525_ACWST": "Australia/Eucla",
+    "+540_TLT": "Asia/Dili",
+    "+540_WIT": "Asia/Jayapura",
+    "+540_JST": "Asia/Tokyo",
+    "+540_KST": "Asia/Seoul",
+    "+540_PWT": "Pacific/Palau",
+    "+540_YAKT": "Asia/Chita",
+    "+570_ACST": "Australia/Adelaide",
+    "+600_AEST": "Australia/Sydney",
+    "+600_ChST": "Pacific/Guam",
+    "+600_CHUT": "Pacific/Chuuk",
+    "+600_DDUT": "Antarctica/DumontDUrville",
+    "+600_PGT": "Pacific/Port_Moresby",
+    "+600_VLAT": "Asia/Vladivostok",
+    "+630_LHST": "Australia/Lord_Howe",
+    "+660_BST": "Pacific/Bougainville",
+    "+660_KOST": "Pacific/Kosrae",
+    "+660_NCT": "Pacific/Noumea",
+    "+660_NFT": "Pacific/Norfolk",
+    "+660_SAKT": "Asia/Sakhalin",
+    "+660_SBT": "Pacific/Guadalcanal",
+    "+660_VUT": "Pacific/Efate",
+    "+720_FJT": "Pacific/Fiji",
+    "+720_GILT": "Pacific/Tarawa",
+    "+720_MHT": "Pacific/Majuro",
+    "+720_NRT": "Pacific/Nauru",
+    "+720_NZST": "Pacific/Auckland",
+    "+720_PETT": "Asia/Kamchatka",
+    "+720_TVT": "Pacific/Funafuti",
+    "+720_WAKT": "Pacific/Wake",
+    "+720_WFT": "Pacific/Wallis",
+    "+765_CHAST": "Pacific/Chatham",
+    "+780_WST": "Pacific/Apia",
+    "+780_PHOT": "Pacific/Kanton",
+    "+780_TKT": "Pacific/Fakaofo",
+    "+780_TOT": "Pacific/Tongatapu",
+    "+840_LINT": "Pacific/Kiritimati"
+  }
+}
