@@ -85,6 +85,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
                 if (data.TryGetValue("id", out token)) myDict["tzid"] = token;
                 myDict["offset"] = offset;
                 RequestSerialization();
+                TzSyncData();
                 return;
             }
             var owner = Networking.GetOwner(gameObject);
