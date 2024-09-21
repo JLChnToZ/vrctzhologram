@@ -26,7 +26,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             for (int i = 0, count = keys.Count; i < count; i++)
                 temp[keys[i]] = true;
             keys = data.GetKeys();
-            for (int i = 0, count = keys.Count; i < count; i++) {
+            for (int i = 0, count = keys.Count, activeCount = 0; i < count; i++) {
                 var key = keys[i];
                 if (!data.TryGetValue(key, TokenType.DataDictionary, out var token)) continue;
                 var entryDict = token.DataDictionary;
@@ -48,7 +48,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
                         instance = instanceGO.GetComponent<TimeZoneViewTargetBase>();
                     }
                     instanceData[tzid] = instance;
-                    instance.SetMetaInfo(tzid, entryDict.TryGetValue("offset", TokenType.Double, out token) ? token.Double : 0);
+                    instance.SetMetaInfo(activeCount++, tzid, entryDict.TryGetValue("offset", TokenType.Double, out token) ? token.Double : 0);
                 }
                 instance.SetActive(true);
                 instance.AddPlayerData(key.String);

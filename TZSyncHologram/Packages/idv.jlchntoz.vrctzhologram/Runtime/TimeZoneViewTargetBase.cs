@@ -22,12 +22,14 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
 
         public virtual void SetActive(bool active) {
             gameObject.SetActive(active);
-            if (active) {
-                if (!slowUpdateFired) SendCustomEventDelayedFrames(nameof(_SlowUpdate), 0);
-            }
+            if (active) StartUpdate();
         }
 
-        public virtual void SetMetaInfo(string tzid, double offset) {
+        protected void StartUpdate() {
+            if (!slowUpdateFired) SendCustomEventDelayedFrames(nameof(_SlowUpdate), 0);
+        }
+
+        public virtual void SetMetaInfo(int index, string tzid, double offset) {
             playerCount = 0;
             timeOffset = 0;
             tzName = "";

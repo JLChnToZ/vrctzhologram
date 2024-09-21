@@ -12,12 +12,12 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
         bool isActive;
 
         public override void SetActive(bool active) {
-            base.SetActive(active);
-            if (!active) isActive = false;
+            if (active) StartUpdate();
+            else isActive = false;
         }
 
-        public override void SetMetaInfo(string tzid, double offset) {
-            base.SetMetaInfo(tzid, offset);
+        public override void SetMetaInfo(int index, string tzid, double offset) {
+            base.SetMetaInfo(index, tzid, offset);
             if (tzData != null) {
                 if (tzData.TryGetValue("latitude", TokenType.Double, out var token))
                     latitude = (float)token.Double;
