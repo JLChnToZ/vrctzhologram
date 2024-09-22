@@ -26,6 +26,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
         }
 
         public override void OnPlayerLeft(VRCPlayerApi player) {
+            if (player.displayName == localPlayer.displayName) return; // This may happen when you are local testing (multiple selves)
             if (playerDataDict != null && playerDataDict.Remove(player.displayName)) {
                 TzSyncData();
                 if (!delaySerializationRequested) {
