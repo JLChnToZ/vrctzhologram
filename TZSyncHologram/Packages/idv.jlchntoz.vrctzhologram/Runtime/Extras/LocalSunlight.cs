@@ -12,8 +12,10 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
         const double DAY_PER_TICKS = 1.0 / TimeSpan.TicksPerDay;
         const float SUNRISE_ANGLE = 0.0145438976515827F; // Sin of 0.83 degree
         [SerializeField, HideInInspector, BindUdonSharpEvent] TimeZoneManagerV2 timeZoneManager;
+        public bool calcSolarPosition;
         public bool calcNextSolarEventTime;
         [NonSerialized] public double latitude, longitude;
+        [NonSerialized] public float solarElevation, solarAzimuth;
         [NonSerialized] public DateTime nextSunrise, nextSunset, nextSolarEvent;
         [NonSerialized] public bool hasSunriseAndSunset;
         Light sunLight;
@@ -26,6 +28,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
         void Start() {
             sunLight = GetComponent<Light>();
             if (sunLight != null) {
+                calcSolarPosition = true;
                 sunLight.useColorTemperature = true;
                 sunLight.type = LightType.Directional;
                 sunLight.intensity = 0F; // Disable the light first
@@ -57,7 +60,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             }
             SendCustomEventDelayedSeconds(nameof(_SlowUpdate), 1);
             CalculateSunCoordinates();
-            if (sunLight != null) SimulateSun();
+            if (calcSolarPosition) SimulateSun();
             if (calcNextSolarEventTime) DetermineNextSolarEvent();
         }
 
@@ -86,11 +89,13 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             float sinElevation = sinLatitude * sinDecl + cosLatitude * cosDecl * cosHourAngle;
             float elevation = Mathf.Asin(sinElevation);
             float cosElevation = Mathf.Cos(elevation);
-            elevation *= Mathf.Rad2Deg;
-            float azimuth = Mathf.Acos((sinDecl - sinLatitude * sinElevation) / cosLatitude / cosElevation) * Mathf.Rad2Deg;
-            sunLight.intensity = Mathf.Max(0, sinElevation);
-            sunLight.colorTemperature = 2200F + 2300F * sinElevation;
-            transform.localRotation = Quaternion.Euler(elevation, azimuth, 0F);
+            solarElevation = elevation * Mathf.Rad2Deg;
+            solarAzimuth = Mathf.Acos((sinDecl - sinLatitude * sinElevation) / cosLatitude / cosElevation) * Mathf.Rad2Deg;
+            if (sunLight != null) {
+                sunLight.intensity = Mathf.Max(0, sinElevation);
+                sunLight.colorTemperature = 2200F + 2300F * sinElevation;
+                transform.localRotation = Quaternion.Euler(solarElevation, solarAzimuth, 0F);
+            }
         }
 
         void DetermineNextSolarEvent() {
