@@ -42,6 +42,15 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             timeOffset = offset;
         }
 
+        public virtual void ClearPlayerData() {
+            playerCount = 0;
+            jointPlayerNames = "";
+            if (!updateTextFired) {
+                updateTextFired = true;
+                SendCustomEventDelayedFrames(nameof(_UpdateText), 0);
+            }
+        }
+
         public virtual void AddPlayerData(string playerId) {
             if (playerNames == null)
                 playerNames = new string[16];
