@@ -58,7 +58,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
                 isSlowUpdateFired = false;
                 return;
             }
-            SendCustomEventDelayedSeconds(nameof(_SlowUpdate), 1);
+            SendCustomEventDelayedSeconds(nameof(_SlowUpdate), 1F);
             CalculateSunCoordinates();
             if (calcSolarPosition) SimulateSun();
             if (calcNextSolarEventTime) DetermineNextSolarEvent();
@@ -79,7 +79,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             );
             rightAsc = Mathf.Atan2(cosEclObl * sinEclLng, cosEclLng);
             sinDecl = sinEclObl * sinEclLng;
-            cosDecl = Mathf.Sqrt(1 - sinDecl * sinDecl);
+            cosDecl = Mathf.Sqrt(1F - sinDecl * sinDecl);
         }
 
         void SimulateSun() {
@@ -92,16 +92,16 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             solarElevation = elevation * Mathf.Rad2Deg;
             solarAzimuth = Mathf.Acos((sinDecl - sinLatitude * sinElevation) / cosLatitude / cosElevation) * Mathf.Rad2Deg;
             if (sunLight != null) {
-                sunLight.intensity = Mathf.Max(0, sinElevation);
+                sunLight.intensity = Mathf.Max(0F, sinElevation);
                 sunLight.colorTemperature = 2200F + 2300F * sinElevation;
                 transform.localRotation = Quaternion.Euler(solarElevation, solarAzimuth, 0F);
             }
         }
 
         void DetermineNextSolarEvent() {
-            float solarNoon = 720F - ((float)longitude - (solarLongitude - rightAsc) * Mathf.Rad2Deg) * 4F;
-            float cosHourAngle = (SUNRISE_ANGLE - sinLatitude * sinDecl) / cosLatitude / cosDecl;
-            if (cosHourAngle < -1F || cosHourAngle > 1F) {
+            float solarNoon = Mathf.Repeat(720F - ((float)longitude - (solarLongitude - rightAsc) * Mathf.Rad2Deg) * 4F, 1440F);
+            float cosHourAngle = Mathf.Abs((SUNRISE_ANGLE - sinLatitude * sinDecl) / cosLatitude / cosDecl);
+            if (cosHourAngle > 1F) {
                 hasSunriseAndSunset = false;
                 this.nextSunrise = this.nextSunset = DateTime.MinValue;
                 return;
@@ -109,9 +109,9 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             float deltaTime = Mathf.Acos(cosHourAngle) * Mathf.Rad2Deg * 4F;
             var todaySolarNoon = now.Date.AddMinutes(solarNoon);
             var nextSunrise = todaySolarNoon.AddMinutes(-deltaTime);
-            if (nextSunrise < now) nextSunrise = nextSunrise.AddDays(1);
+            if (nextSunrise < now) nextSunrise = nextSunrise.AddDays(1.0);
             var nextSunset = todaySolarNoon.AddMinutes(deltaTime);
-            if (nextSunset < now) nextSunset = nextSunset.AddDays(1);
+            if (nextSunset < now) nextSunset = nextSunset.AddDays(1.0);
             if (hasSunriseAndSunset) {
                 if (this.nextSunrise < now) SendEvent("_OnSunrise");
                 if (this.nextSunset < now) SendEvent("_OnSunset");
