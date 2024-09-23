@@ -1660,7 +1660,7 @@
       "latitude": 54.68333333334284,
       "longitude": 20.616666666679638
     },
-    "Europe/Kyiv": {
+    "Europe/Kiev": {
       "name": "Eastern European Time",
       "latitude": 47.56666666667569,
       "longitude": 34.36666666668057
@@ -2478,6 +2478,7 @@
     "+780_PHOT": "Pacific/Kanton",
     "+780_TKT": "Pacific/Fakaofo",
     "+780_TOT": "Pacific/Tongatapu",
-    "+840_LINT": "Pacific/Kiritimati"
+    "+840_LINT": "Pacific/Kiritimati",
+    "Europe/Kyiv": "Europe/Kiev"
   }
 }

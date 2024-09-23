@@ -68,6 +68,10 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             if (localData != null) return localData;
             // +XXX_ABBR, where XXX is offset in minutes, ABBR is abbreviation
             localData = GetTimezone($"{localTz.BaseUtcOffset.TotalMinutes:+000;-000}_{localTz.Id}");
+            if (localData == null) {
+                Debug.LogError($"Failed to find local timezone data: {localTz.Id}");
+                localData = new DataDictionary();
+            }
             return localData;
         }
 
