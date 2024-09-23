@@ -1,7 +1,7 @@
 {
   "name": "idv.jlchntoz.vrctzhologram",
   "displayName": "Time Zone Sync Hologram",
-  "version": "2.0.0-beta.5",
+  "version": "2.0.0-beta.6",
   "unity": "2019.4",
   "description": "A hologram earth gimmick asset for VRChat SDK3 worlds which shows everyone's timezone, approximate location and their local time.",
   "license": "MIT",

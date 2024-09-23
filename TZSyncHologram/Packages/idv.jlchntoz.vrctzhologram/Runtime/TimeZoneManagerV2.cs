@@ -19,7 +19,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
 
         public bool Ready => ready;
 
-        public double LocalOffset => (double)localTz.BaseUtcOffset.Ticks / TimeSpan.TicksPerMinute;
+        public double LocalOffset => (double)localTz.GetUtcOffset(Networking.GetNetworkDateTime()).Ticks / TimeSpan.TicksPerMinute;
 
         void Start() {
             TimeZoneInfo.ClearCachedData();
