@@ -33,12 +33,10 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
                 if (!entryDict.TryGetValue("tzid", TokenType.String, out token)) continue;
                 var tzid = token.String;
                 TimeZoneViewTargetBase instance;
+                bool isNewlyAdded;
                 if (instanceData.TryGetValue(tzid, TokenType.Reference, out token)) {
                     instance = (TimeZoneViewTargetBase)token.Reference;
-                    if (temp.Remove(tzid)) {
-                        instance.SetActive(true);
-                        instance.ClearPlayerData();
-                    }
+                    isNewlyAdded = temp.Remove(tzid);
                 } else {
                     int index = pool.Count - 1;
                     if (index >= 0) {
@@ -51,6 +49,9 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
                         instance = instanceGO.GetComponent<TimeZoneViewTargetBase>();
                     }
                     instanceData[tzid] = instance;
+                    isNewlyAdded = true;
+                }
+                if (isNewlyAdded) {
                     instance.SetActive(true);
                     instance.SetMetaInfo(activeCount++, tzid, entryDict.TryGetValue("offset", TokenType.Double, out token) ? token.Double : 0);
                     instance.ClearPlayerData();
