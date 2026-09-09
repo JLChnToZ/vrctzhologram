@@ -8,129 +8,173 @@ using JLChnToZ.VRC.Foundation;
 namespace JLChnToZ.VRC.TimeZoneSyncHologram {
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
     public class LocalSunlight : UdonSharpEventSender {
-        const long JD2000_TICKS = 630823248000000000L;
-        const double DAY_PER_TICKS = 1.0 / TimeSpan.TicksPerDay;
-        const float SUNRISE_ANGLE = 0.0145438976515827F; // Sin of 0.83 degree
-        [SerializeField, HideInInspector, BindUdonSharpEvent] TimeZoneManagerV2 timeZoneManager;
+        const long J2000_TICKS = 630823248000000000L; // 2000-01-01 12:00:00 UTC
+        const double DAYS_PER_TICK = 1.0 / TimeSpan.TicksPerDay;
+        const float MINUTES_PER_DEGREE = 4F; // 1440 min / 360 deg of hour angle
+        const float SUNRISE_SIN_ALTITUDE = -0.0145439F; // Altitude of the Sun's CENTRE at rise/set: -0.8333 deg (34' refraction + 16' semi-diameter)
+        [SerializeField, HideInInspector, BindUdonSharpEvent(nameof(_OnTzDataReady))] TimeZoneManagerV2 timeZoneManager;
+        [SerializeField, Min(0)] float peakIntensity = 1F; // use ~100000 (lux) with physical light units
+        [SerializeField, Range(1000F, 8000F)] float horizonColorTemperature = 1800F;
+        [SerializeField, Range(1000F, 8000F)] float zenithColorTemperature = 6500F;
         public bool calcSolarPosition;
         public bool calcNextSolarEventTime;
         [NonSerialized] public double latitude, longitude;
         [NonSerialized] public float solarElevation, solarAzimuth;
         [NonSerialized] public DateTime nextSunrise, nextSunset, nextSolarEvent;
         [NonSerialized] public bool hasSunriseAndSunset;
+        [NonSerialized] public DayNightMode dayNightMode;
         Light sunLight;
         DateTime now;
-        double daySinceJ2k;
-        float sinLatitude, cosLatitude, sinLongitude, cosLongitude;
-        float solarLongitude, rightAsc, sinDecl, cosDecl;
+        double daysSinceJ2000;
+        float sinLat, cosLat, sinDecl, cosDecl, rightAsc, meanLng;
         bool isSlowUpdateFired;
+
+#if COMPILER_UDONSHARP
+        public
+#endif
+        void _onVarChange_latitude() => SinCos((float)latitude * Mathf.Deg2Rad, out sinLat, out cosLat);
 
         void Start() {
             sunLight = GetComponent<Light>();
-            if (sunLight != null) {
-                calcSolarPosition = true;
-                sunLight.useColorTemperature = true;
-                sunLight.type = LightType.Directional;
-                sunLight.intensity = 0F; // Disable the light first
-            }
+            if (!Utilities.IsValid(sunLight)) return;
+            calcSolarPosition = true;
+            sunLight.useColorTemperature = true;
+            sunLight.type = LightType.Directional;
+            sunLight.intensity = 0F; // Disable the light first
         }
 
         void OnEnable() {
             if (!isSlowUpdateFired) SendCustomEventDelayedFrames(nameof(_SlowUpdate), 0);
         }
 
-        public void _OnTzDataReady() {
+#if COMPILER_UDONSHARP
+        public
+#endif
+        void _OnTzDataReady() {
             var tzData = timeZoneManager.GetLocalTimezone();
-            if (tzData != null) {
+            if (Utilities.IsValid(tzData)) {
                 if (tzData.TryGetValue("latitude", TokenType.Double, out var token)) {
                     latitude = token.Double;
                     _onVarChange_latitude();
                 }
                 if (tzData.TryGetValue("longitude", TokenType.Double, out token)) {
                     longitude = token.Double;
-                    _onVarChange_longitude();
                 }
             }
         }
 
-        public void _SlowUpdate() {
-            if (!enabled || !gameObject.activeInHierarchy) {
+#if COMPILER_UDONSHARP
+        public
+#endif
+        void _SlowUpdate() {
+            if (!isActiveAndEnabled) {
                 isSlowUpdateFired = false;
                 return;
             }
             SendCustomEventDelayedSeconds(nameof(_SlowUpdate), 1F);
-            CalculateSunCoordinates();
+            now = Networking.GetNetworkDateTime();
             if (calcSolarPosition) SimulateSun();
             if (calcNextSolarEventTime) DetermineNextSolarEvent();
         }
 
-        void CalculateSunCoordinates() {
-            now = Networking.GetNetworkDateTime();
-            daySinceJ2k = (now.Ticks - JD2000_TICKS) * DAY_PER_TICKS;
-            solarLongitude = ToFloatDegrees(280.460 + 0.9856474 * daySinceJ2k);
-            float g = ToFloatDegrees(357.528 + 0.9856003 * daySinceJ2k) * Mathf.Deg2Rad;
-            SinCos(
-                (solarLongitude + 1.915F * Mathf.Sin(g) + 0.020F * Mathf.Sin(g * 2F)) * Mathf.Deg2Rad,
-                out float sinEclLng, out float cosEclLng
-            );
-            SinCos(
-                (23.439F - (float)(0.0000004 * daySinceJ2k)) * Mathf.Deg2Rad,
-                out float sinEclObl, out float cosEclObl
-            );
-            rightAsc = Mathf.Atan2(cosEclObl * sinEclLng, cosEclLng);
-            sinDecl = sinEclObl * sinEclLng;
+        void CalcDaysSinceJ2000(DateTime time, double offset) =>
+            daysSinceJ2000 = (time.Ticks - J2000_TICKS) * DAYS_PER_TICK + offset;
+
+        float WrapTime(double scale, double add) {
+            double result = scale * daysSinceJ2000 + add;
+            return (float)(result - Math.Floor(result / 360.0) * 360.0);
+        }
+
+        void ComputeSolarCoordinates() {
+            meanLng = WrapTime(0.9856474, 280.46061837);
+            float g = WrapTime(0.9856003, 357.528) * Mathf.Deg2Rad;
+            SinCos((meanLng + 1.915F * Mathf.Sin(g) + 0.02F * Mathf.Sin(2F * g)) * Mathf.Deg2Rad, out float sinLambda, out float cosLambda);
+            SinCos((float)(23.439 - 0.0000004 * daysSinceJ2000) * Mathf.Deg2Rad, out float sinEps, out float cosEps);
+            sinDecl = sinEps * sinLambda;
             cosDecl = Mathf.Sqrt(1F - sinDecl * sinDecl);
+            rightAsc = Mathf.Atan2(cosEps * sinLambda, cosLambda);
         }
 
         void SimulateSun() {
-            double utcHourAngle = (daySinceJ2k + 0.5) % 1.0 * 360.0;
-            float lst = ToFloatDegrees(100.46 + 0.985647352 * daySinceJ2k + longitude + utcHourAngle) * Mathf.Deg2Rad;
-            float cosHourAngle = Mathf.Cos(lst - rightAsc);
-            float sinElevation = sinLatitude * sinDecl + cosLatitude * cosDecl * cosHourAngle;
-            float elevation = Mathf.Asin(sinElevation);
-            float cosElevation = Mathf.Cos(elevation);
-            solarElevation = elevation * Mathf.Rad2Deg;
-            solarAzimuth = Mathf.Acos((sinDecl - sinLatitude * sinElevation) / cosLatitude / cosElevation) * Mathf.Rad2Deg;
-            if (sunLight != null) {
-                sunLight.intensity = Mathf.Max(0F, sinElevation);
-                sunLight.colorTemperature = 2200F + 2300F * sinElevation;
-                transform.localRotation = Quaternion.Euler(solarElevation, solarAzimuth, 0F);
-            }
+            CalcDaysSinceJ2000(now, 0);
+            ComputeSolarCoordinates();
+            float lst = WrapTime(360.98564736629, 280.46061837 + longitude) * Mathf.Deg2Rad;
+            SinCos(lst - rightAsc, out float sinHour, out float cosHour);
+            float sinElv = Mathf.Clamp(sinLat * sinDecl + cosLat * cosDecl * cosHour, -1F, 1F);
+            solarElevation = Mathf.Asin(sinElv) * Mathf.Rad2Deg;
+            solarAzimuth = Mathf.Repeat(Mathf.Atan2(-cosDecl * sinHour, sinDecl * cosLat - cosDecl * sinLat * cosHour) * Mathf.Rad2Deg, 360F);
+            transform.localRotation = Quaternion.Euler(solarElevation, solarAzimuth + 180F, 0F);
+            if (!Utilities.IsValid(sunLight)) return;
+            float t = Mathf.Max(0F, sinElv);
+            sunLight.intensity = peakIntensity * t;
+            sunLight.colorTemperature = Mathf.Lerp(horizonColorTemperature, zenithColorTemperature, Mathf.Sqrt(t));
         }
 
         void DetermineNextSolarEvent() {
-            float solarNoon = Mathf.Repeat(720F - ((float)longitude - (solarLongitude - rightAsc) * Mathf.Rad2Deg) * 4F, 1440F);
-            float cosHourAngle = Mathf.Abs((SUNRISE_ANGLE - sinLatitude * sinDecl) / cosLatitude / cosDecl);
-            if (cosHourAngle > 1F) {
-                hasSunriseAndSunset = false;
-                this.nextSunrise = this.nextSunset = DateTime.MinValue;
+            bool hadEvents = hasSunriseAndSunset;
+            DateTime prevSunrise = nextSunrise, prevSunset = nextSunset, rise = default, set = default, se;
+            bool hasRise = false, hasSet = false;
+            var nowDate = now.Date;
+            for (int dayOffset = 0; dayOffset < 4 && (!hasRise || !hasSet); dayOffset++) {
+                nextSunrise = nextSunset = DateTime.MaxValue;
+                var offsetDate = nowDate.AddDays(dayOffset);
+                CalcDaysSinceJ2000(offsetDate, 0.5 - longitude / 360.0);
+                dayNightMode = DayNightMode.DayNight;
+                for (int i = 0; i < 2; i++) {
+                    ComputeSolarCoordinates();
+                    var noonMinutes = 720.0 - longitude * MINUTES_PER_DEGREE - EquationOfTimeMinutes(meanLng, rightAsc * Mathf.Rad2Deg);
+                    var solarNoon = offsetDate.AddMinutes(noonMinutes);
+                    float cosH0 = Mathf.Abs(cosLat) < 1E-6F ?
+                        (sinLat * sinDecl > SUNRISE_SIN_ALTITUDE ? -1F : 1F) :
+                        (SUNRISE_SIN_ALTITUDE - sinLat * sinDecl) / (cosLat * cosDecl);
+                    if (cosH0 <= -1F) {
+                        dayNightMode = DayNightMode.DayOnly;
+                        break;
+                    }
+                    if (cosH0 >= 1F) {
+                        dayNightMode = DayNightMode.NightOnly;
+                        break;
+                    }
+                    var halfDay = Mathf.Acos(cosH0) * Mathf.Rad2Deg * MINUTES_PER_DEGREE;
+                    se = solarNoon.AddMinutes(-halfDay);
+                    if (now < se) {
+                        rise = se;
+                        hasRise = true;
+                    }
+                    se = solarNoon.AddMinutes(halfDay);
+                    if (now < se) {
+                        set = se;
+                        hasSet = true;
+                    }
+                    CalcDaysSinceJ2000(solarNoon, 0);
+                }
+                if (dayNightMode != DayNightMode.DayNight) continue;
+            }
+            hasSunriseAndSunset = hasRise && hasSet;
+            if (!hasSunriseAndSunset) {
+                nextSunrise = nextSunset = nextSolarEvent = DateTime.MaxValue;
                 return;
             }
-            float deltaTime = Mathf.Acos(cosHourAngle) * Mathf.Rad2Deg * 4F;
-            var todaySolarNoon = now.Date.AddMinutes(solarNoon);
-            var nextSunrise = todaySolarNoon.AddMinutes(-deltaTime);
-            if (nextSunrise < now) nextSunrise = nextSunrise.AddDays(1.0);
-            var nextSunset = todaySolarNoon.AddMinutes(deltaTime);
-            if (nextSunset < now) nextSunset = nextSunset.AddDays(1.0);
-            if (hasSunriseAndSunset) {
-                if (this.nextSunrise < now) SendEvent("_OnSunrise");
-                if (this.nextSunset < now) SendEvent("_OnSunset");
+            if (hadEvents) {
+                if (prevSunrise < DateTime.MaxValue && prevSunrise <= now) SendEvent("_OnSunrise");
+                if (prevSunset < DateTime.MaxValue && prevSunset <= now) SendEvent("_OnSunset");
             }
-            this.nextSunrise = nextSunrise;
-            this.nextSunset = nextSunset;
+            nextSunrise = rise;
+            nextSunset = set;
             nextSolarEvent = nextSunrise < nextSunset ? nextSunrise : nextSunset;
-            hasSunriseAndSunset = true;
         }
-
-        float ToFloatDegrees(double degrees) => (float)(degrees % 360.0);
 
         void SinCos(float angle, out float sin, out float cos) {
             sin = Mathf.Sin(angle);
             cos = Mathf.Cos(angle);
         }
 
-        public void _onVarChange_latitude() => SinCos((float)latitude * Mathf.Deg2Rad, out sinLatitude, out cosLatitude);
+        float EquationOfTimeMinutes(float meanLongitude, float rightAscension) => (Mathf.Repeat(meanLongitude - rightAscension + 180F, 360F) - 180F) * MINUTES_PER_DEGREE;
+    }
 
-        public void _onVarChange_longitude() => SinCos((float)longitude * Mathf.Deg2Rad, out sinLongitude, out cosLongitude);
+    public enum DayNightMode {
+        DayNight = 0,
+        DayOnly = 1,
+        NightOnly = -1,
     }
 }

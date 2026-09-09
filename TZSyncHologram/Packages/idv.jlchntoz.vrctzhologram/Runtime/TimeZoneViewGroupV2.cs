@@ -6,7 +6,7 @@ using JLChnToZ.VRC.Foundation;
 namespace JLChnToZ.VRC.TimeZoneSyncHologram {
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
     public class TimeZoneViewGroupV2 : UdonSharpBehaviour {
-        [SerializeField, HideInInspector, BindUdonSharpEvent]
+        [SerializeField, HideInInspector, BindUdonSharpEvent(nameof(_OnTzSyncData))]
         NetworkTimeSyncManagerV2 networkTimeSyncManager;
         [SerializeField] GameObject entryPrefab;
         [SerializeField] Transform rootTransform;
@@ -19,7 +19,11 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             temp = new DataDictionary();
         }
 
-        public void _OnTzSyncData() {
+#if COMPILER_UDONSHARP
+        public
+#endif
+        
+        void _OnTzSyncData() {
             var data = networkTimeSyncManager.SyncData;
             var keys = instanceData.GetKeys();
             temp.Clear();

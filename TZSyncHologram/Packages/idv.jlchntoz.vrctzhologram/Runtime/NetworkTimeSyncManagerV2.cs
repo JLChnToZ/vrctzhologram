@@ -8,7 +8,7 @@ using JLChnToZ.VRC.Foundation;
 namespace JLChnToZ.VRC.TimeZoneSyncHologram {
     [UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
     public partial class NetworkTimeSyncManagerV2 : UdonSharpEventSender {
-        [SerializeField, HideInInspector, BindUdonSharpEvent]
+        [SerializeField, HideInInspector, BindUdonSharpEvent(nameof(_OnTzDataReady))]
         TimeZoneManagerV2 timeZoneManager;
         [UdonSynced] string data;
         VRCPlayerApi localPlayer;
@@ -27,7 +27,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
 
         public override void OnPlayerLeft(VRCPlayerApi player) {
             if (player.displayName == localPlayer.displayName) return; // This may happen when you are local testing (multiple selves)
-            if (playerDataDict != null && playerDataDict.Remove(player.displayName)) {
+            if (Utilities.IsValid(playerDataDict) && playerDataDict.Remove(player.displayName)) {
                 TzSyncData();
                 if (!delaySerializationRequested) {
                     delaySerializationRequested = true;
@@ -37,6 +37,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
         }
 
         public override void OnPreSerialization() {
+            if (!Utilities.IsValid(playerDataDict)) return;
             if (VRCJson.TrySerializeToJson(playerDataDict, JsonExportType.Minify, out var json))
                 data = json.String;
             else
@@ -44,7 +45,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
         }
 
         public override void OnPostSerialization(SerializationResult result) {
-            if (result.success && playerDataDict != null &&
+            if (result.success && Utilities.IsValid(playerDataDict) &&
                 playerDataDict.ContainsKey(localPlayer.displayName))
                 myDataFilled = true;
         }
@@ -54,7 +55,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
                 playerDataDict = token.DataDictionary;
             else {
                 Debug.LogError($"Failed to parse JSON data: {token}");
-                if (playerDataDict == null) playerDataDict = new DataDictionary();
+                if (!Utilities.IsValid(playerDataDict)) playerDataDict = new DataDictionary();
             }
             myDataFilled = playerDataDict.ContainsKey(localPlayer.displayName);
             DelayCheckAndFillData();
@@ -71,12 +72,15 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             );
         }
 
-        public void _CheckAndFillData() {
+#if COMPILER_UDONSHARP
+        public
+#endif
+        void _CheckAndFillData() {
             if (myDataFilled) return;
             if (Networking.IsOwner(gameObject)) {
                 var data = timeZoneManager.GetLocalTimezone();
                 var offset = timeZoneManager.LocalOffset;
-                if (playerDataDict == null) playerDataDict = new DataDictionary();
+                if (!Utilities.IsValid(playerDataDict)) playerDataDict = new DataDictionary();
                 string myName = localPlayer.displayName;
                 DataDictionary myDict;
                 if (playerDataDict.TryGetValue(myName, TokenType.DataDictionary, out var token))
@@ -90,7 +94,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
                 return;
             }
             var owner = Networking.GetOwner(gameObject);
-            if (playerDataDict != null && playerDataDict.ContainsKey(owner.displayName))
+            if (Utilities.IsValid(playerDataDict) && playerDataDict.ContainsKey(owner.displayName))
                 Networking.SetOwner(localPlayer, gameObject);
         }
 
@@ -100,7 +104,10 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
                 RequestSerialization();
         }
 
-        public void _OnTzDataReady() {
+#if COMPILER_UDONSHARP
+        public
+#endif
+        void _OnTzDataReady() {
             tzDataReady = true;
             if (pendingUpdate) {
                 SendEvent("_OnTzSyncData");

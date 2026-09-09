@@ -11,11 +11,11 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
     [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
     public partial class TimeZoneManagerV2 : UdonSharpEventSender {
         [SerializeField] TextAsset localDefinition;
-        [SerializeField] VRCUrl definitionURL;
-        DataDictionary tzData, abbrData;
+        [SerializeField, TrustUrlCheck(TrustedUrlTypes.StringUrl)] VRCUrl definitionURL;
+        [SerializeField, HideInInspector] DataDictionary tzData, abbrData;
+        [SerializeField, HideInInspector] bool ready;
         DataDictionary localData;
         TimeZoneInfo localTz;
-        bool ready;
 
         public bool Ready => ready;
 
@@ -24,8 +24,10 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
         void Start() {
             TimeZoneInfo.ClearCachedData();
             localTz = TimeZoneInfo.Local;
-            if (localDefinition != null)
+            if (Utilities.IsValid(localDefinition))
                 ParseData(localDefinition.text);
+            else if (ready)
+                SendEvent("_OnTzDataReady");
             if (!VRCUrl.IsNullOrEmpty(definitionURL))
                 VRCStringDownloader.LoadUrl(definitionURL, (IUdonEventReceiver)this);
         }
@@ -59,16 +61,18 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             }
             abbrData = token.DataDictionary;
             ready = true;
+#if COMPILER_UDONSHARP
             SendEvent("_OnTzDataReady");
+#endif
         }
 
         public DataDictionary GetLocalTimezone() {
-            if (localData != null) return localData;
+            if (Utilities.IsValid(localData)) return localData;
             localData = GetTimezone(localTz.Id);
-            if (localData != null) return localData;
+            if (Utilities.IsValid(localData)) return localData;
             // +XXX_ABBR, where XXX is offset in minutes, ABBR is abbreviation
             localData = GetTimezone($"{localTz.BaseUtcOffset.TotalMinutes:+000;-000}_{localTz.Id}");
-            if (localData == null) {
+            if (!Utilities.IsValid(localData)) {
                 Debug.LogError($"Failed to find local timezone data: {localTz.Id}");
                 localData = new DataDictionary();
             }
@@ -78,7 +82,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
         public DataDictionary GetTimezone(string tzName) => ready && (
             tzData.TryGetValue(tzName, TokenType.DataDictionary, out var token) || (
             abbrData.TryGetValue(tzName, TokenType.String, out token) &&
-            tzData.TryGetValue(token.String, TokenType.DataDictionary, out token)
+            tzData.TryGetValue(token, TokenType.DataDictionary, out token)
         )) ? token.DataDictionary : null;
     }
 
@@ -86,6 +90,22 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
     public partial class TimeZoneManagerV2 : ISingleton<TimeZoneManagerV2> {
         public void Merge(TimeZoneManagerV2[] others) {
             MergeTargets(others);
+            if (localDefinition == null) {
+                foreach (var other in others)
+                    if (other.localDefinition != null) {
+                        localDefinition = other.localDefinition;
+                        break;
+                    }
+                if (localDefinition == null) return;
+            }
+            ParseData(localDefinition.text);
+            localDefinition = null;
+            if (!ready) {
+                tzData = abbrData = null;
+                return;
+            }
+            tzData = tzData.DeepClone();
+            abbrData = abbrData.DeepClone();
         }
     }
 #endif

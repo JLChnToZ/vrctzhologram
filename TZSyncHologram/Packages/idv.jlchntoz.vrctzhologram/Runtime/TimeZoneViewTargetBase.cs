@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using VRC.SDKBase;
 using VRC.SDK3.Data;
 using UdonSharp;
 
@@ -35,7 +36,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             tzName = "";
             jointPlayerNames = "";
             tzData = timeZoneManager.GetTimezone(tzid);
-            if (tzData != null && tzData.TryGetValue("name", TokenType.String, out var token))
+            if (Utilities.IsValid(tzData) && tzData.TryGetValue("name", TokenType.String, out var token))
                 tzName = token.String;
             else
                 tzName = tzid;
@@ -52,7 +53,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
         }
 
         public virtual void AddPlayerData(string playerId) {
-            if (playerNames == null)
+            if (!Utilities.IsValid(playerNames))
                 playerNames = new string[16];
             else if (playerCount >= playerNames.Length) {
                 var newPlayerNames = new string[playerNames.Length * 2];
@@ -66,7 +67,11 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             }
         }
 
-        public void _SlowUpdate() {
+#if COMPILER_UDONSHARP
+        public
+#endif
+        
+        void _SlowUpdate() {
             if (!enabled || !gameObject.activeInHierarchy) {
                 slowUpdateFired = false;
                 return;
@@ -76,19 +81,20 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             UpdateText();
         }
 
-        public void _UpdateText() {
+#if COMPILER_UDONSHARP
+        public
+#endif
+        void _UpdateText() {
             updateTextFired = false;
             jointPlayerNames = string.Join(playerNameSeparator, playerNames, 0, playerCount);
             UpdateText();
         }
 
-        protected virtual void UpdateText() {
-            SetText(string.Format(textFormat, jointPlayerNames, tzName, DateTime.UtcNow.AddMinutes(timeOffset)));
-        }
+        protected virtual void UpdateText() => SetText(string.Format(textFormat, jointPlayerNames, tzName, DateTime.UtcNow.AddMinutes(timeOffset)));
 
         protected virtual void SetText(string text) {
-            if (texts != null) foreach (var t in texts) if (t != null) t.text = text;
-            if (tmpros != null) foreach (var t in tmpros) if (t != null) t.text = text;
+            if (Utilities.IsValid(texts)) foreach (var t in texts) if (Utilities.IsValid(t)) t.text = text;
+            if (Utilities.IsValid(tmpros)) foreach (var t in tmpros) if (Utilities.IsValid(t)) t.text = text;
         }
     }
 }

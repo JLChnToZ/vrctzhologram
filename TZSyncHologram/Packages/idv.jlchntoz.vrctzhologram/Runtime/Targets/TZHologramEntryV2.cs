@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using VRC.SDKBase;
 using VRC.SDK3.Data;
 using UdonSharp;
 
@@ -18,7 +19,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
 
         public override void SetMetaInfo(int index, string tzid, double offset) {
             base.SetMetaInfo(index, tzid, offset);
-            if (tzData != null) {
+            if (Utilities.IsValid(tzData)) {
                 if (tzData.TryGetValue("latitude", TokenType.Double, out var token))
                     latitude = (float)token.Double;
                 if (tzData.TryGetValue("longitude", TokenType.Double, out token))
@@ -35,7 +36,7 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             lineRenderer.SetPosition(1, pos2);
             textTransform.localPosition = pos2;
             textTransform.localRotation = Quaternion.AngleAxis(Quaternion.LookRotation(pos2).eulerAngles.y + 90, Vector3.up);
-            if (textDisplayController != null)
+            if (Utilities.IsValid(textDisplayController))
                 textDisplayController.SetBool("isActive", isActive);
         }
     }
