@@ -16,6 +16,8 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
         [SerializeField, Min(0)] float peakIntensity = 1F; // use ~100000 (lux) with physical light units
         [SerializeField, Range(1000F, 8000F)] float horizonColorTemperature = 1800F;
         [SerializeField, Range(1000F, 8000F)] float zenithColorTemperature = 6500F;
+        [SerializeField, Resolve(".")] Light sunLight;
+        [SerializeField, HideInInspector, Resolve(nameof(sunLight))] Transform lightTransform;
         public bool calcSolarPosition;
         public bool calcNextSolarEventTime;
         [NonSerialized] public double latitude, longitude;
@@ -23,27 +25,23 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
         [NonSerialized] public DateTime nextSunrise, nextSunset, nextSolarEvent;
         [NonSerialized] public bool hasSunriseAndSunset;
         [NonSerialized] public DayNightMode dayNightMode;
-        Light sunLight;
         DateTime now;
         double daysSinceJ2000;
         float sinLat, cosLat, sinDecl, cosDecl, rightAsc, meanLng;
-        bool isSlowUpdateFired;
+        bool isSlowUpdateFired, useColorTemperature;
 
 #if COMPILER_UDONSHARP
         public
 #endif
         void _onVarChange_latitude() => SinCos((float)latitude * Mathf.Deg2Rad, out sinLat, out cosLat);
 
-        void Start() {
-            sunLight = GetComponent<Light>();
-            if (!Utilities.IsValid(sunLight)) return;
-            calcSolarPosition = true;
-            sunLight.useColorTemperature = true;
-            sunLight.type = LightType.Directional;
-            sunLight.intensity = 0F; // Disable the light first
-        }
-
         void OnEnable() {
+            if (Utilities.IsValid(sunLight)) {
+                calcSolarPosition = true;
+                useColorTemperature = sunLight.useColorTemperature;
+                sunLight.intensity = 0F; // Disable the light first
+            } else
+                lightTransform = transform;
             if (!isSlowUpdateFired) SendCustomEventDelayedFrames(nameof(_SlowUpdate), 0);
         }
 
@@ -103,11 +101,15 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             float sinElv = Mathf.Clamp(sinLat * sinDecl + cosLat * cosDecl * cosHour, -1F, 1F);
             solarElevation = Mathf.Asin(sinElv) * Mathf.Rad2Deg;
             solarAzimuth = Mathf.Repeat(Mathf.Atan2(-cosDecl * sinHour, sinDecl * cosLat - cosDecl * sinLat * cosHour) * Mathf.Rad2Deg, 360F);
-            transform.localRotation = Quaternion.Euler(solarElevation, solarAzimuth + 180F, 0F);
+            lightTransform.localRotation = Quaternion.Euler(solarElevation, solarAzimuth + 180F, 0F);
             if (!Utilities.IsValid(sunLight)) return;
             float t = Mathf.Max(0F, sinElv);
             sunLight.intensity = peakIntensity * t;
-            sunLight.colorTemperature = Mathf.Lerp(horizonColorTemperature, zenithColorTemperature, Mathf.Sqrt(t));
+            t = Mathf.Lerp(horizonColorTemperature, zenithColorTemperature, Mathf.Sqrt(t));
+            if (useColorTemperature)
+                sunLight.colorTemperature = t;
+            else
+                sunLight.color = Mathf.CorrelatedColorTemperatureToRGB(t);
         }
 
         void DetermineNextSolarEvent() {
