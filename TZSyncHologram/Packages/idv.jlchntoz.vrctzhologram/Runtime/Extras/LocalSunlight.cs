@@ -114,55 +114,52 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
 
         void DetermineNextSolarEvent() {
             bool hadEvents = hasSunriseAndSunset;
-            DateTime prevSunrise = nextSunrise, prevSunset = nextSunset, rise = default, set = default, se;
+            DateTime prevSunrise = nextSunrise, prevSunset = nextSunset;
+            DateTime rise = DateTime.MaxValue, set = DateTime.MaxValue;
             bool hasRise = false, hasSet = false;
             var nowDate = now.Date;
-            for (int dayOffset = 0; dayOffset < 4 && (!hasRise || !hasSet); dayOffset++) {
-                nextSunrise = nextSunset = DateTime.MaxValue;
+            for (int dayOffset = -1; dayOffset < 4 && (!hasRise || !hasSet); dayOffset++) {
                 var offsetDate = nowDate.AddDays(dayOffset);
                 CalcDaysSinceJ2000(offsetDate, 0.5 - longitude / 360.0);
-                dayNightMode = DayNightMode.DayNight;
+                var mode = DayNightMode.DayNight;
+                DateTime riseToday = default, setToday = default;
                 for (int i = 0; i < 2; i++) {
                     ComputeSolarCoordinates();
-                    var noonMinutes = 720.0 - longitude * MINUTES_PER_DEGREE - EquationOfTimeMinutes(meanLng, rightAsc * Mathf.Rad2Deg);
-                    var solarNoon = offsetDate.AddMinutes(noonMinutes);
+                    var solarNoon = offsetDate.AddMinutes((720.0 - longitude - Mathf.Repeat(meanLng - rightAsc * Mathf.Rad2Deg + 180F, 360F)) * MINUTES_PER_DEGREE);
                     float cosH0 = Mathf.Abs(cosLat) < 1E-6F ?
                         (sinLat * sinDecl > SUNRISE_SIN_ALTITUDE ? -1F : 1F) :
                         (SUNRISE_SIN_ALTITUDE - sinLat * sinDecl) / (cosLat * cosDecl);
                     if (cosH0 <= -1F) {
-                        dayNightMode = DayNightMode.DayOnly;
+                        mode = DayNightMode.DayOnly;
                         break;
                     }
                     if (cosH0 >= 1F) {
-                        dayNightMode = DayNightMode.NightOnly;
+                        mode = DayNightMode.NightOnly;
                         break;
                     }
                     var halfDay = Mathf.Acos(cosH0) * Mathf.Rad2Deg * MINUTES_PER_DEGREE;
-                    se = solarNoon.AddMinutes(-halfDay);
-                    if (now < se) {
-                        rise = se;
-                        hasRise = true;
-                    }
-                    se = solarNoon.AddMinutes(halfDay);
-                    if (now < se) {
-                        set = se;
-                        hasSet = true;
-                    }
+                    riseToday = solarNoon.AddMinutes(-halfDay);
+                    setToday = solarNoon.AddMinutes(halfDay);
                     CalcDaysSinceJ2000(solarNoon, 0);
                 }
-                if (dayNightMode != DayNightMode.DayNight) continue;
+                if (dayOffset == 0) dayNightMode = mode;
+                if (mode != DayNightMode.DayNight) continue;
+                if (!hasRise && now < riseToday) {
+                    rise = riseToday;
+                    hasRise = true;
+                }
+                if (!hasSet && now < setToday) {
+                    set = setToday;
+                    hasSet = true;
+                }
             }
-            hasSunriseAndSunset = hasRise && hasSet;
-            if (!hasSunriseAndSunset) {
-                nextSunrise = nextSunset = nextSolarEvent = DateTime.MaxValue;
-                return;
-            }
+            hasSunriseAndSunset = hasRise || hasSet;
             if (hadEvents) {
                 if (prevSunrise < DateTime.MaxValue && prevSunrise <= now) SendEvent("_OnSunrise");
                 if (prevSunset < DateTime.MaxValue && prevSunset <= now) SendEvent("_OnSunset");
             }
-            nextSunrise = rise;
-            nextSunset = set;
+            nextSunrise = hasRise ? rise : DateTime.MaxValue;
+            nextSunset = hasSet ? set : DateTime.MaxValue;
             nextSolarEvent = nextSunrise < nextSunset ? nextSunrise : nextSunset;
         }
 
@@ -170,8 +167,6 @@ namespace JLChnToZ.VRC.TimeZoneSyncHologram {
             sin = Mathf.Sin(angle);
             cos = Mathf.Cos(angle);
         }
-
-        float EquationOfTimeMinutes(float meanLongitude, float rightAscension) => (Mathf.Repeat(meanLongitude - rightAscension + 180F, 360F) - 180F) * MINUTES_PER_DEGREE;
     }
 
     public enum DayNightMode {
